@@ -2,54 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb64e111-7a4f-489b-aa90-c5b6ff8b0a00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_email_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_camunda_engine_7_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_camunda_engine_spring_7_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/SpringProcessEngineTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/diagram_1.bpmn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_camunda_engine_7_14_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_dmn_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_dmn_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_feel_api_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_feel_api_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_feel_juel_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_feel_juel_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_dmn_camunda_engine_feel_scala_7_14_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_bpmn_model_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_bpmn_model_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_cmmn_model_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_cmmn_model_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_dmn_model_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_dmn_model_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_xml_model_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_bpm_model_camunda_xml_model_7_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_commons_camunda_commons_logging_1_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_commons_camunda_commons_logging_1_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_commons_camunda_commons_typed_values_7_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_commons_camunda_commons_typed_values_1_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_commons_camunda_commons_utils_1_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_commons_camunda_commons_utils_1_6_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_connect_camunda_connect_connectors_all_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_camunda_connect_camunda_connect_core_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_8_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/MySpringProcessEngineConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/activiti-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/activiti-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/camunda/camunda-simple/camunda-simple.iml" beforeDir="false" afterPath="$PROJECT_DIR$/camunda/camunda-simple/camunda-simple.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camunda/camunda-simple/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/camunda/camunda-simple/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/camunda.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/camunda1.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camunda/camunda-simple/target/classes/camunda.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/camunda1.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/camunda.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camunda/camunda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/camunda/camunda.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/camunda.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/camunda.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -103,53 +63,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="564">
+              <caret line="33" column="8" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/ProcessEngineFactoryBean.class">
+        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/SpringProcessEngineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/SpringTransactionsProcessEngineConfiguration.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.13.0/camunda-engine-7.13.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="2012" selection-start-line="2012" selection-end-line="2012" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/SpringProcessEngineConfiguration.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="144">
+              <caret line="8" selection-start-line="8" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/SpringProcessEngineTest.java">
+        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/MyProcessEnginePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="324">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,11 +94,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/MySpringProcessEngineConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="85" selection-end-column="25" />
+            <state relative-caret-position="126">
+              <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="12" selection-start-line="12" selection-end-line="24" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.10.0/camunda-engine-7.10.0.jar!/org/camunda/bpm/engine/impl/cfg/StandaloneProcessEngineConfiguration.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.10.0/camunda-engine-7.10.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="1105" column="16" selection-start-line="1105" selection-start-column="16" selection-end-line="1105" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/util/Properties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.10.0/camunda-engine-7.10.0.jar!/org/camunda/bpm/engine/ProcessEngineConfiguration.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -195,6 +184,8 @@
       <find>isDbHistoryUsed</find>
       <find>postProcessEngineBuild</find>
       <find>hikari</find>
+      <find>databaseTypeMappings</find>
+      <find>initDataType</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,8 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/xylink/demo/config/Main.java" />
-        <option value="$PROJECT_DIR$/demo/src/test/java/com/xylink/demo/ProcessEngineTest.java" />
         <option value="$PROJECT_DIR$/demo/src/main/resources/applicationContext-activiti.xml" />
         <option value="$PROJECT_DIR$/demo/src/main/resources/diagrams/leave.xml" />
         <option value="$PROJECT_DIR$/demo/src/main/resources/db.properties" />
@@ -252,8 +241,10 @@
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/SpringProcessEngineTest.java" />
-        <option value="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml" />
         <option value="$PROJECT_DIR$/camunda/camunda-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/MySpringProcessEngineConfiguration.java" />
+        <option value="$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml" />
+        <option value="$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest4.java" />
       </list>
     </option>
   </component>
@@ -556,7 +547,7 @@
       <workItem from="1610949909536" duration="29000" />
       <workItem from="1611309538429" duration="722000" />
       <workItem from="1611565609039" duration="22859000" />
-      <workItem from="1611646404861" duration="1948000" />
+      <workItem from="1611646404861" duration="3910000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1611631204226</created>
@@ -565,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611631204226</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add spring">
+      <created>1611648402343</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611648402343</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -577,14 +575,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117300000" />
+    <option name="totallyTimeSpent" value="119262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-55" width="1920" height="1015" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="BPMN Editor" order="0" weight="0.39084134" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49822694" visible="true" weight="0.17465389" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49822694" visible="true" weight="0.22310969" />
       <window_info id="Web" order="2" sideWeight="0.50177306" side_tool="true" weight="0.18070818" />
       <window_info id="Structure" order="3" sideWeight="0.50057536" side_tool="true" weight="0.2014652" />
       <window_info id="Designer" order="4" />
@@ -598,8 +595,8 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Messages" order="5" weight="0.32814237" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4993895" visible="true" weight="0.32814237" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.4993895" weight="0.33926585" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4993895" weight="0.32814237" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.4993895" visible="true" weight="0.3403782" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -632,73 +629,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.14.0/camunda-engine-spring-7.14.0.jar!/org/camunda/bpm/engine/spring/SpringTransactionsProcessEngineConfiguration.class</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.14.0/camunda-engine-7.14.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class</url>
-          <line>674</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar!/com/zaxxer/hikari/HikariDataSource.class</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/SpringConfigurationHelper.class</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/SpringTransactionsProcessEngineConfiguration.class</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.13.0/camunda-engine-7.13.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class</url>
-          <line>637</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.13.0/camunda-engine-7.13.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class</url>
-          <line>2012</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/SpringProcessEngineConfiguration.class</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/ProcessEngineFactoryBean.class</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.13.0/camunda-engine-spring-7.13.0.jar!/org/camunda/bpm/engine/spring/ProcessEngineFactoryBean.class</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="add spring" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/activiti_demo$SpringProcessEngineTest.ic" NAME="SpringProcessEngineTest Coverage Results" MODIFIED="1611643804047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -706,87 +638,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/MyProcessEngineConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest6.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/activiti/activiti-spring/5.21.0/activiti-spring-5.21.0.jar!/org/activiti/spring/SpringConfigurationHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.14.0/camunda-engine-spring-7.14.0.jar!/org/camunda/bpm/engine/spring/SpringConfigurationHelper.class" />
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/demo/demo/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/demo/demo/ProcessEngineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.14.0/camunda-engine-7.14.0.jar!/org/camunda/bpm/engine/ProcessEngines.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="102" selection-start-line="102" selection-end-line="103" />
-          <folding>
-            <element signature="e#7626#7627#0" expanded="true" />
-            <element signature="e#7678#7679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar!/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -840,13 +691,6 @@
     </entry>
     <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.14.0/camunda-engine-spring-7.14.0.jar!/org/camunda/bpm/engine/spring/SpringTransactionsProcessEngineConfiguration.class" />
     <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.14.0/camunda-engine-spring-7.14.0.jar!/org/camunda/bpm/engine/spring/SpringProcessEngineConfiguration.class" />
-    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar!/com/zaxxer/hikari/HikariDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.14.0/camunda-engine-7.14.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5796">
@@ -905,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/MyProcessEnginePlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineFromInputStreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -970,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/camunda1.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti2.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1029,25 +856,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="85" selection-end-column="25" />
+        <state relative-caret-position="1008">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar!/com/zaxxer/hikari/HikariDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/camunda.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.10.0/camunda-engine-spring-7.10.0.jar!/org/camunda/bpm/engine/spring/SpringTransactionsProcessEngineConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine-spring/7.10.0/camunda-engine-spring-7.10.0.jar!/org/camunda/bpm/engine/spring/SpringProcessEngineConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="88" lean-forward="true" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/MyProcessEngineConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.10.0/camunda-engine-7.10.0.jar!/org/camunda/bpm/engine/impl/cfg/StandaloneProcessEngineConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.10.0/camunda-engine-7.10.0.jar!/org/camunda/bpm/engine/ProcessEngineConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/camunda-engine/7.10.0/camunda-engine-7.10.0.jar!/org/camunda/bpm/engine/impl/cfg/ProcessEngineConfigurationImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1105" column="16" selection-start-line="1105" selection-start-column="16" selection-end-line="1105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/ProcessEngineTest4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" selection-start-line="12" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/resources/activiti-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="33" column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/MySpringProcessEngineConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/spring/SpringProcessEngineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="8" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camunda/camunda-simple/src/main/java/com/demo/MyProcessEnginePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1106,7 +1027,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>activiti-demo</last-edited>
+          <last-edited>camunda</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

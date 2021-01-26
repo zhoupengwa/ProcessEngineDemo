@@ -14,16 +14,20 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <bean id="processEngine" class="org.camunda.bpm.engine.spring.ProcessEngineFactoryBean">
-        <property name="processEngineConfiguration" ref="processEngineConfiguration"/>
-    </bean>
 
-    <bean id="processEngineConfiguration" class="org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration">
+    <!--    <bean id="processEngineConfiguration" class="org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration">-->
+    <bean id="processEngineConfiguration" class="com.demo.spring.MySpringProcessEngineConfiguration">
         <property name="dataSource" ref="dataSource"/>
         <property name="databaseSchemaUpdate" value="true"/>
         <property name="transactionManager" ref="transactionManager"/>
+        <property name="deploymentResources" value="classpath:*.bpmn"/>
+        <property name="databaseType" value="MYSQL"/>
+        <property name="deploymentTenantId" value="A系统"/>
+    </bean>
 
-<!--        <property name="deploymentResources" value="classpath:*.bpmn"/>-->
+
+    <bean id="processEngine" class="org.camunda.bpm.engine.spring.ProcessEngineFactoryBean">
+        <property name="processEngineConfiguration" ref="processEngineConfiguration"/>
     </bean>
 
 
