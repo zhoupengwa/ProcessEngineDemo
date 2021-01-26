@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.clojure:core.specs.alpha:0.1.24">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/clojure/core.specs.alpha/0.1.24/core.specs.alpha-0.1.24.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/clojure/core.specs.alpha/0.1.24/core.specs.alpha-0.1.24-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/clojure/core.specs.alpha/0.1.24/core.specs.alpha-0.1.24-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

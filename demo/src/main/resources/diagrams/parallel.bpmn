@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/testm1610500160627" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1610500160627" name="" targetNamespace="http://www.activiti.org/testm1610500160627" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="parallel" isClosed="false" isExecutable="true" processType="None">
+    <startEvent id="start" name="StartEvent"/>
+    <userTask activiti:exclusive="true" id="auditor" name="审计人"/>
+    <parallelGateway gatewayDirection="Unspecified" id="_4" name="ParallelGateway"/>
+    <sequenceFlow id="_5" sourceRef="auditor" targetRef="_4"/>
+    <userTask activiti:exclusive="true" id="factoryDirector" name="厂长"/>
+    <userTask activiti:exclusive="true" id="deputyDirector" name="副厂长"/>
+    <sequenceFlow id="_8" sourceRef="_4" targetRef="factoryDirector"/>
+    <sequenceFlow id="_9" sourceRef="_4" targetRef="deputyDirector"/>
+    <userTask activiti:exclusive="true" id="Secretary" name="党委书记"/>
+    <userTask activiti:exclusive="true" id="financial" name="财务"/>
+    <endEvent id="_14" name="EndEvent"/>
+    <sequenceFlow id="_15" sourceRef="financial" targetRef="_14"/>
+    <sequenceFlow id="_16" sourceRef="Secretary" targetRef="financial"/>
+    <sequenceFlow id="_17" sourceRef="start" targetRef="auditor"/>
+    <parallelGateway gatewayDirection="Unspecified" id="_2" name="ParallelGateway"/>
+    <sequenceFlow id="_3" sourceRef="factoryDirector" targetRef="_2"/>
+    <sequenceFlow id="_6" sourceRef="deputyDirector" targetRef="_2"/>
+    <sequenceFlow id="_7" sourceRef="_2" targetRef="Secretary"/>
+  </process>
+  <bpmndi:BPMNDiagram documentation="background=#3C3F41;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
+    <bpmndi:BPMNPlane bpmnElement="parallel">
+      <bpmndi:BPMNShape bpmnElement="start" id="Shape-start">
+        <dc:Bounds height="32.0" width="32.0" x="160.0" y="-10.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="auditor" id="Shape-auditor">
+        <dc:Bounds height="55.0" width="85.0" x="140.0" y="50.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" id="Shape-_4">
+        <dc:Bounds height="32.0" width="32.0" x="165.0" y="150.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="factoryDirector" id="Shape-factoryDirector">
+        <dc:Bounds height="55.0" width="85.0" x="60.0" y="225.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="deputyDirector" id="Shape-deputyDirector">
+        <dc:Bounds height="55.0" width="85.0" x="240.0" y="225.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Secretary" id="Shape-Secretary">
+        <dc:Bounds height="55.0" width="85.0" x="50.0" y="330.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="financial" id="Shape-financial">
+        <dc:Bounds height="55.0" width="85.0" x="155.0" y="390.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" id="Shape-_14">
+        <dc:Bounds height="32.0" width="32.0" x="185.0" y="470.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" id="Shape-_2">
+        <dc:Bounds height="32.0" width="32.0" x="165.0" y="275.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_15" id="BPMNEdge__15" sourceElement="financial" targetElement="_14">
+        <di:waypoint x="201.0" y="445.0"/>
+        <di:waypoint x="201.0" y="470.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17" id="BPMNEdge__17" sourceElement="start" targetElement="auditor">
+        <di:waypoint x="176.0" y="22.0"/>
+        <di:waypoint x="176.0" y="50.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16" id="BPMNEdge__16" sourceElement="Secretary" targetElement="financial">
+        <di:waypoint x="135.0" y="357.5"/>
+        <di:waypoint x="155.0" y="417.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3" id="BPMNEdge__3" sourceElement="factoryDirector" targetElement="_2">
+        <di:waypoint x="145.0" y="252.5"/>
+        <di:waypoint x="165.0" y="291.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5" id="BPMNEdge__5" sourceElement="auditor" targetElement="_4">
+        <di:waypoint x="181.0" y="105.0"/>
+        <di:waypoint x="181.0" y="150.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="BPMNEdge__6" sourceElement="deputyDirector" targetElement="_2">
+        <di:waypoint x="240.0" y="252.5"/>
+        <di:waypoint x="197.0" y="291.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7" sourceElement="_2" targetElement="Secretary">
+        <di:waypoint x="165.0" y="291.0"/>
+        <di:waypoint x="135.0" y="357.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8" sourceElement="_4" targetElement="factoryDirector">
+        <di:waypoint x="165.0" y="166.0"/>
+        <di:waypoint x="145.0" y="252.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9" id="BPMNEdge__9" sourceElement="_4" targetElement="deputyDirector">
+        <di:waypoint x="197.0" y="166.0"/>
+        <di:waypoint x="240.0" y="252.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

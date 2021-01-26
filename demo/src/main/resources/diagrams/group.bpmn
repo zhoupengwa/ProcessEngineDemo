@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/testm1610594134683" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1610594134683" name="" targetNamespace="http://www.activiti.org/testm1610594134683" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="groupDecision" isClosed="false" isExecutable="true" name="会签测试" processType="None">
+    <startEvent id="start" name="StartEvent"/>
+    <endEvent id="end" name="EndEvent"/>
+    <userTask activiti:assignee="#{signer}" activiti:exclusive="true" id="decision" name="会签决策">
+      <extensionElements>
+        <activiti:taskListener class="com.xylink.demo.controller.listener.GroupStartLisenter" event="create"/>
+      </extensionElements>
+      <multiInstanceLoopCharacteristics activiti:collection="#{signerList}" activiti:elementVariable="signer" isSequential="true">
+        <completionCondition><![CDATA[${nrOfCompletedInstances==nrOfInstances}]]></completionCondition>
+      </multiInstanceLoopCharacteristics>
+    </userTask>
+    <userTask activiti:exclusive="true" id="auditor" name="审计人"/>
+    <sequenceFlow id="_2" sourceRef="start" targetRef="auditor"/>
+    <sequenceFlow id="_3" sourceRef="auditor" targetRef="decision"/>
+    <userTask activiti:exclusive="true" id="lastConform" name="最终确认"/>
+    <sequenceFlow id="_5" sourceRef="decision" targetRef="lastConform"/>
+    <sequenceFlow id="_6" sourceRef="lastConform" targetRef="end"/>
+  </process>
+  <bpmndi:BPMNDiagram documentation="background=#3C3F41;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
+    <bpmndi:BPMNPlane bpmnElement="groupDecision">
+      <bpmndi:BPMNShape bpmnElement="start" id="Shape-start">
+        <dc:Bounds height="32.0" width="32.0" x="165.0" y="-15.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end" id="Shape-end">
+        <dc:Bounds height="32.0" width="32.0" x="175.0" y="365.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="decision" id="Shape-decision">
+        <dc:Bounds height="55.0" width="85.0" x="145.0" y="185.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="auditor" id="Shape-auditor">
+        <dc:Bounds height="55.0" width="85.0" x="145.0" y="75.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="lastConform" id="Shape-lastConform">
+        <dc:Bounds height="55.0" width="85.0" x="150.0" y="280.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_2" id="BPMNEdge__2" sourceElement="start" targetElement="auditor">
+        <di:waypoint x="181.0" y="17.0"/>
+        <di:waypoint x="181.0" y="75.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3" id="BPMNEdge__3" sourceElement="auditor" targetElement="decision">
+        <di:waypoint x="187.5" y="130.0"/>
+        <di:waypoint x="187.5" y="185.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5" id="BPMNEdge__5" sourceElement="decision" targetElement="lastConform">
+        <di:waypoint x="190.0" y="240.0"/>
+        <di:waypoint x="190.0" y="280.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="BPMNEdge__6" sourceElement="lastConform" targetElement="end">
+        <di:waypoint x="191.0" y="335.0"/>
+        <di:waypoint x="191.0" y="365.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

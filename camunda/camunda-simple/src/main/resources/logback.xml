@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true" scan="true" scanPeroid="1 seconds">
+
+    <contextName>camunda-simple</contextName>
+    <property name="log.path" value="log"/>
+
+    <!--标准控制台输出-->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+
+        <!--低于DEBUG级别的不打印-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} [%file : %line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--文件输出-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/camunda.log</file>
+
+        <!--低于INFO级别的文件不记录-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/xhban.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <!--日志保存周期-->
+            <maxHistory>15</maxHistory>
+            <!--总大小-->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+
+        <!--msg最大长度为2048，向尾截取-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %.2048(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--根级日志输出-->
+    <root level="info">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </root>
+
+    <!--开发包下的代码日志输出，不向上传递（防止根级再次打印重复内容）-->
+    <logger name="org.apache.ibatis" level="info" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+    <logger name="javax.activation" level="info" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+
+    <logger name="javax.activation" level="info" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+
+    <logger name="org.springframework" level="info" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+    <logger name="org.camunda" level="info" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+    <logger name="org.camunda.bpm.engine.test" level="debug" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+
+    <logger name="org.camunda.bpm.engine.impl.persistence.entity" level="debug" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+    <logger name="org.camunda.bpm.engine.history" level="debug" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
+
+</configuration>

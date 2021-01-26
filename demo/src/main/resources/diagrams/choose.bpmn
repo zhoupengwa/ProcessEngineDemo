@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/testm1610357002501" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1610357002501" name="" targetNamespace="http://www.activiti.org/testm1610357002501" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="choose" isClosed="false" isExecutable="true" name="分支选择" processType="None">
+    <startEvent id="start" name="StartEvent"/>
+    <userTask activiti:assignee="张经理" activiti:exclusive="true" id="manager" name="经理"/>
+    <userTask activiti:assignee="李老板" activiti:exclusive="true" id="boss" name="老板"/>
+    <endEvent id="end" name="EndEvent"/>
+    <sequenceFlow id="_3" sourceRef="manager" targetRef="end"/>
+    <sequenceFlow id="_4" sourceRef="boss" targetRef="end"/>
+    <userTask activiti:exclusive="true" id="_6" name="UserTask"/>
+    <userTask activiti:exclusive="true" id="first_deal" name="审计人">
+      <extensionElements>
+        <activiti:taskListener class="com.xylink.demo.controller.listener.Listener" event="create"/>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="_2" sourceRef="start" targetRef="first_deal"/>
+    <userTask activiti:exclusive="true" id="_8" name="部门经理"/>
+    <sequenceFlow id="_10" sourceRef="_8" targetRef="end"/>
+    <exclusiveGateway gatewayDirection="Unspecified" id="exclusiveGateway" name="排他网关"/>
+    <sequenceFlow id="_11" sourceRef="first_deal" targetRef="exclusiveGateway"/>
+    <sequenceFlow id="_12" name="重要" sourceRef="exclusiveGateway" targetRef="manager">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${message=='重要'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_13" name="非常重要" sourceRef="exclusiveGateway" targetRef="boss">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${message=='非常重要'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_5" name="normal" sourceRef="exclusiveGateway" targetRef="_8">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${message=='重要'}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram documentation="background=#3C3F41;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
+    <bpmndi:BPMNPlane bpmnElement="choose">
+      <bpmndi:BPMNShape bpmnElement="start" id="Shape-start">
+        <dc:Bounds height="32.0" width="32.0" x="140.0" y="-15.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="manager" id="Shape-manager">
+        <dc:Bounds height="55.0" width="85.0" x="-25.0" y="250.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="boss" id="Shape-boss">
+        <dc:Bounds height="55.0" width="85.0" x="290.0" y="245.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end" id="Shape-end">
+        <dc:Bounds height="32.0" width="32.0" x="160.0" y="400.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" id="Shape-_6">
+        <dc:Bounds height="55.0" width="85.0" x="400.0" y="20.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="first_deal" id="Shape-first_deal">
+        <dc:Bounds height="55.0" width="85.0" x="115.0" y="45.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" id="Shape-_8">
+        <dc:Bounds height="55.0" width="85.0" x="135.0" y="315.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusiveGateway" id="Shape-exclusiveGateway" isMarkerVisible="false">
+        <dc:Bounds height="32.0" width="32.0" x="145.0" y="140.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_13" id="BPMNEdge__13" sourceElement="exclusiveGateway" targetElement="boss">
+        <di:waypoint x="177.0" y="156.0"/>
+        <di:waypoint x="290.0" y="272.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12" id="BPMNEdge__12" sourceElement="exclusiveGateway" targetElement="manager">
+        <di:waypoint x="145.0" y="156.0"/>
+        <di:waypoint x="60.0" y="277.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2" id="BPMNEdge__2" sourceElement="start" targetElement="first_deal">
+        <di:waypoint x="156.0" y="17.0"/>
+        <di:waypoint x="156.0" y="45.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3" id="BPMNEdge__3" sourceElement="manager" targetElement="end">
+        <di:waypoint x="60.0" y="277.5"/>
+        <di:waypoint x="160.0" y="416.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4" id="BPMNEdge__4" sourceElement="boss" targetElement="end">
+        <di:waypoint x="290.0" y="272.5"/>
+        <di:waypoint x="192.0" y="416.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5" id="BPMNEdge__5" sourceElement="exclusiveGateway" targetElement="_8">
+        <di:waypoint x="161.0" y="172.0"/>
+        <di:waypoint x="161.0" y="315.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11" id="BPMNEdge__11" sourceElement="first_deal" targetElement="exclusiveGateway">
+        <di:waypoint x="161.0" y="100.0"/>
+        <di:waypoint x="161.0" y="140.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10" id="BPMNEdge__10" sourceElement="_8" targetElement="end">
+        <di:waypoint x="176.0" y="370.0"/>
+        <di:waypoint x="176.0" y="400.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
