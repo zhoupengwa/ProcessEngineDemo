@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.camunda.bpm.dmn:camunda-engine-feel-api:7.10.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/dmn/camunda-engine-feel-api/7.10.0/camunda-engine-feel-api-7.10.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/dmn/camunda-engine-feel-api/7.10.0/camunda-engine-feel-api-7.10.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/developer/apache-maven-3.6.1/conf/repository/org/camunda/bpm/dmn/camunda-engine-feel-api/7.10.0/camunda-engine-feel-api-7.10.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
