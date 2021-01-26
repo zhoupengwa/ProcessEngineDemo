@@ -13,7 +13,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>camunda-simple</module>
+        <module>camunda-springboot</module>
     </modules>
+
 
 
 </project>
