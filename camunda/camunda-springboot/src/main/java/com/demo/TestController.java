@@ -16,9 +16,9 @@ public class TestController {
     private RepositoryService repositoryService;
 
     @GetMapping("/msg")
-    public ProcessDefinition msg(String processKey) {
-        ProcessDefinition processDefinition = repositoryService.getProcessDefinition(processKey);
-        return processDefinition;
+    public String msg(String processKey) {
+        ProcessDefinition definition = repositoryService.getProcessDefinition(processKey);
+        return definition.toString();
     }
 
 }

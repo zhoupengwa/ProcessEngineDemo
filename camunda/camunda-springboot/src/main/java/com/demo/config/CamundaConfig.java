@@ -1,8 +1,7 @@
 package com.demo.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.camunda.bpm.engine.ProcessEngineConfiguration;
-import org.camunda.bpm.engine.RepositoryService;
+import org.camunda.bpm.engine.*;
 import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.engine.spring.ProcessEngineFactoryBean;
 import org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration;
@@ -33,6 +32,7 @@ public class CamundaConfig {
         processEngineConfiguration.setDatabaseSchemaUpdate("false");
         processEngineConfiguration.setDataSource(dataSource);
         processEngineConfiguration.setTransactionManager(transactionManager);
+        processEngineConfiguration.setDatabaseType("mysql");
         return processEngineConfiguration;
     }
 
@@ -47,13 +47,32 @@ public class CamundaConfig {
 
 
     @Bean
-    public RepositoryService repositoryService(ProcessEngineFactoryBean processEngine) {
-        try {
-            return processEngine.getObject().getRepositoryService();
-        } catch (Exception e) {
-            throw new RuntimeException("camunda repositoryService error", e);
-        }
+    public RepositoryService repositoryService(ProcessEngineFactoryBean processEngine) throws Exception {
+        return processEngine.getObject().getRepositoryService();
     }
 
+    @Bean
+    public RuntimeService runtimeService(ProcessEngineFactoryBean processEngine) throws Exception {
+        return processEngine.getObject().getRuntimeService();
+    }
 
+    @Bean
+    public TaskService taskService(ProcessEngineFactoryBean processEngine) throws Exception {
+        return processEngine.getObject().getTaskService();
+    }
+
+    @Bean
+    public HistoryService historyService(ProcessEngineFactoryBean processEngine) throws Exception {
+        return processEngine.getObject().getHistoryService();
+    }
+
+    @Bean
+    public ManagementService managementService(ProcessEngineFactoryBean processEngine) throws Exception {
+        return processEngine.getObject().getManagementService();
+    }
+
+    @Bean
+    public IdentityService identityService(ProcessEngineFactoryBean processEngine) throws Exception {
+        return processEngine.getObject().getIdentityService();
+    }
 }
