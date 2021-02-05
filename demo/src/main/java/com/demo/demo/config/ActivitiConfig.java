@@ -42,7 +42,8 @@ public class ActivitiConfig {
         configuration.setDataSource(dataSource);
         configuration.setTransactionManager(transactionManager);
         //没有表先创建表
-        configuration.setDatabaseSchemaUpdate("true");
+        configuration.setDatabaseType("mysql");
+        configuration.setDatabaseSchemaUpdate("false");
         configuration.setJobExecutorActivate(true);
         configuration.setActivityFontName("宋体");
         configuration.setLabelFontName("宋体");

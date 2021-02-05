@@ -28,7 +28,7 @@ public class RuntimeController {
         String processKey = param.getProcessKey();
         //指定执行我们刚才部署的工作流程
         //取得流程实例
-        ProcessInstance pi = runtimeService.startProcessInstanceByKey(processKey, params);
+        ProcessInstance pi = runtimeService.startProcessInstanceByKey(processKey, "mykey", params);
         String result = String.format("执行对象ID:%s\n流程实例ID:%s\n流程定义ID:%s", pi.getId(), pi.getId(), pi.getProcessDefinitionId());
         System.out.println(result);
         return result;
