@@ -69,4 +69,12 @@
         select role_id, role_name
         from zz_role
     </select>
+
+    <select id="selectByRoleIds" resultType="com.demo.domain.dto.ZzRole">
+        select role_id, role_name from zz_role where role_id in
+        <foreach collection="roleIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
 </mapper>

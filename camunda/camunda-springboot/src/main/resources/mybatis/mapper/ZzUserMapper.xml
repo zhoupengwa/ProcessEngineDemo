@@ -1,100 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.mapper.ZzUserMapper">
-  <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZzUser">
-    <!--@mbg.generated-->
-    <!--@Table zz_user-->
-    <id column="user_id" property="userId" />
-    <result column="department_id" property="departmentId" />
-    <result column="role_id" property="roleId" />
-    <result column="username" property="username" />
-    <result column="psd" property="psd" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    user_id, department_id, role_id, username, psd
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from zz_user
-    where user_id = #{userId}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    <!--@mbg.generated-->
-    delete from zz_user
-    where user_id = #{userId}
-  </delete>
-  <insert id="insert" parameterType="com.demo.domain.dto.ZzUser">
-    <!--@mbg.generated-->
-    insert into zz_user (user_id, department_id, role_id, username, psd)
-    values (#{userId}, #{departmentId}, #{roleId}, #{username}, #{psd})
-  </insert>
-  <insert id="insertSelective" parameterType="com.demo.domain.dto.ZzUser">
-    <!--@mbg.generated-->
-    insert into zz_user
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        user_id,
-      </if>
-      <if test="departmentId != null">
-        department_id,
-      </if>
-      <if test="roleId != null">
-        role_id,
-      </if>
-      <if test="username != null">
-        username,
-      </if>
-      <if test="psd != null">
-        psd,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        #{userId},
-      </if>
-      <if test="departmentId != null">
-        #{departmentId},
-      </if>
-      <if test="roleId != null">
-        #{roleId},
-      </if>
-      <if test="username != null">
-        #{username},
-      </if>
-      <if test="psd != null">
-        #{psd},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZzUser">
-    <!--@mbg.generated-->
-    update zz_user
-    <set>
-      <if test="departmentId != null">
-        department_id = #{departmentId},
-      </if>
-      <if test="roleId != null">
+    <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZzUser">
+        <!--@mbg.generated-->
+        <!--@Table zz_user-->
+        <id column="user_id" property="userId"/>
+        <result column="department_id" property="departmentId"/>
+        <result column="role_id" property="roleId"/>
+        <result column="username" property="username"/>
+        <result column="psd" property="psd"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        user_id, department_id, role_id, username, psd
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from zz_user
+        where user_id = #{userId}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from zz_user
+        where user_id = #{userId}
+    </delete>
+    <insert id="insert" parameterType="com.demo.domain.dto.ZzUser">
+        <!--@mbg.generated-->
+        insert into zz_user (user_id, department_id, role_id, username, psd)
+        values (#{userId}, #{departmentId}, #{roleId}, #{username}, #{psd})
+    </insert>
+    <insert id="insertSelective" parameterType="com.demo.domain.dto.ZzUser">
+        <!--@mbg.generated-->
+        insert into zz_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="departmentId != null">
+                department_id,
+            </if>
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="psd != null">
+                psd,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="departmentId != null">
+                #{departmentId},
+            </if>
+            <if test="roleId != null">
+                #{roleId},
+            </if>
+            <if test="username != null">
+                #{username},
+            </if>
+            <if test="psd != null">
+                #{psd},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZzUser">
+        <!--@mbg.generated-->
+        update zz_user
+        <set>
+            <if test="departmentId != null">
+                department_id = #{departmentId},
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId},
+            </if>
+            <if test="username != null">
+                username = #{username},
+            </if>
+            <if test="psd != null">
+                psd = #{psd},
+            </if>
+        </set>
+        where user_id = #{userId}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZzUser">
+        <!--@mbg.generated-->
+        update zz_user
+        set department_id = #{departmentId},
         role_id = #{roleId},
-      </if>
-      <if test="username != null">
         username = #{username},
-      </if>
-      <if test="psd != null">
-        psd = #{psd},
-      </if>
-    </set>
-    where user_id = #{userId}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZzUser">
-    <!--@mbg.generated-->
-    update zz_user
-    set department_id = #{departmentId},
-      role_id = #{roleId},
-      username = #{username},
-      psd = #{psd}
-    where user_id = #{userId}
-  </update>
+        psd = #{psd}
+        where user_id = #{userId}
+    </update>
+
+    <select id="listAll" resultType="com.demo.domain.dto.ZzUser">
+        select user_id, username, psd, department_id, role_id
+        from zz_user
+    </select>
+
+
 </mapper>

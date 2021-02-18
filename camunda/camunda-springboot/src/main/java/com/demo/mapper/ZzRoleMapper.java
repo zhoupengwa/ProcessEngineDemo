@@ -1,8 +1,10 @@
 package com.demo.mapper;
 
 import com.demo.domain.dto.ZzRole;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author zhoupeng
@@ -22,4 +24,5 @@ public interface ZzRoleMapper {
 
     List<ZzRole> listAll();
 
+    List<ZzRole> selectByRoleIds(@Param("roleIds") Set<String> roleIds);
 }

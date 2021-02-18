@@ -1,11 +1,14 @@
 package com.demo.service;
 
 import com.demo.domain.dto.ZzUser;
-    /**
- * @author   zhoupeng
- * 
+import com.demo.domain.vo.ZzUserVO;
+
+import java.util.List;
+
+/**
+ * @author zhoupeng
  */
-public interface ZzUserService{
+public interface ZzUserService {
 
 
     int deleteByPrimaryKey(String userId);
@@ -20,4 +23,5 @@ public interface ZzUserService{
 
     int updateByPrimaryKey(ZzUser record);
 
+    List<ZzUserVO> listAll(ZzUser user);
 }

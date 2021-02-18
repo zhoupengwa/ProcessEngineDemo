@@ -1,67 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.mapper.ZzDepartmentMapper">
-  <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZzDepartment">
-    <!--@mbg.generated-->
-    <!--@Table zz_department-->
-    <id column="department_id" property="departmentId" />
-    <result column="department_name" property="departmentName" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    department_id, department_name
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from zz_department
-    where department_id = #{departmentId}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    <!--@mbg.generated-->
-    delete from zz_department
-    where department_id = #{departmentId}
-  </delete>
-  <insert id="insert" parameterType="com.demo.domain.dto.ZzDepartment">
-    <!--@mbg.generated-->
-    insert into zz_department (department_id, department_name)
-    values (#{departmentId}, #{departmentName})
-  </insert>
-  <insert id="insertSelective" parameterType="com.demo.domain.dto.ZzDepartment">
-    <!--@mbg.generated-->
-    insert into zz_department
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="departmentId != null">
-        department_id,
-      </if>
-      <if test="departmentName != null">
-        department_name,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="departmentId != null">
-        #{departmentId},
-      </if>
-      <if test="departmentName != null">
-        #{departmentName},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZzDepartment">
-    <!--@mbg.generated-->
-    update zz_department
-    <set>
-      <if test="departmentName != null">
-        department_name = #{departmentName},
-      </if>
-    </set>
-    where department_id = #{departmentId}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZzDepartment">
-    <!--@mbg.generated-->
-    update zz_department
-    set department_name = #{departmentName}
-    where department_id = #{departmentId}
-  </update>
+    <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZzDepartment">
+        <!--@mbg.generated-->
+        <!--@Table zz_department-->
+        <id column="department_id" property="departmentId"/>
+        <result column="department_name" property="departmentName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        department_id, department_name
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from zz_department
+        where department_id = #{departmentId}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from zz_department
+        where department_id = #{departmentId}
+    </delete>
+    <insert id="insert" parameterType="com.demo.domain.dto.ZzDepartment">
+        <!--@mbg.generated-->
+        insert into zz_department (department_id, department_name)
+        values (#{departmentId}, #{departmentName})
+    </insert>
+    <insert id="insertSelective" parameterType="com.demo.domain.dto.ZzDepartment">
+        <!--@mbg.generated-->
+        insert into zz_department
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="departmentId != null">
+                department_id,
+            </if>
+            <if test="departmentName != null">
+                department_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="departmentId != null">
+                #{departmentId},
+            </if>
+            <if test="departmentName != null">
+                #{departmentName},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZzDepartment">
+        <!--@mbg.generated-->
+        update zz_department
+        <set>
+            <if test="departmentName != null">
+                department_name = #{departmentName},
+            </if>
+        </set>
+        where department_id = #{departmentId}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZzDepartment">
+        <!--@mbg.generated-->
+        update zz_department
+        set department_name = #{departmentName}
+        where department_id = #{departmentId}
+    </update>
+
+    <select id="listAll" resultType="com.demo.domain.dto.ZzDepartment">
+        select department_id, department_name
+        from zz_department
+    </select>
+
+    <select id="selectByDepartmentIds" resultType="com.demo.domain.dto.ZzDepartment">
+        select department_id, department_name
+        from zz_department where department_id in
+        <foreach collection="departmentIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
 </mapper>

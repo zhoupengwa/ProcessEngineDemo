@@ -1,11 +1,13 @@
 package com.demo.service;
 
 import com.demo.domain.dto.ZzDepartment;
-    /**
- * @author   zhoupeng
- * 
+
+import java.util.List;
+
+/**
+ * @author zhoupeng
  */
-public interface ZzDepartmentService{
+public interface ZzDepartmentService {
 
 
     int deleteByPrimaryKey(String departmentId);
@@ -20,4 +22,5 @@ public interface ZzDepartmentService{
 
     int updateByPrimaryKey(ZzDepartment record);
 
+    List<ZzDepartment> listAll(ZzDepartment department);
 }

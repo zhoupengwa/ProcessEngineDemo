@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,23 +25,12 @@ public class RoleController {
     @Autowired
     private ZzRoleService zzRoleService;
 
-    @Autowired
-    private IdentityService identityService;
-
-
     @GetMapping(value = "/add")
     public ModelAndView add() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("role_add");
         return mv;
     }
-
-    @RequestMapping("/index")
-    public String index(Model model) {
-        model.addAttribute("name", "hello pillar");
-        return "index";
-    }
-
 
     @PostMapping("/save")
     public String save(String roleId, String roleName) {
@@ -57,6 +47,12 @@ public class RoleController {
         List<ZzRole> roleList = zzRoleService.listAll(null);
         model.addAttribute("roleList", roleList);
         return "role_list";
+    }
+
+    @RequestMapping("/delete/{roleId}")
+    public String delete(@PathVariable String roleId) {
+        zzRoleService.deleteByPrimaryKey(roleId);
+        return "redirect:/role/list";
     }
 
 }

@@ -2,6 +2,8 @@ package com.demo.mapper;
 
 import com.demo.domain.dto.ZzUser;
 
+import java.util.List;
+
 /**
  * @author zhoupeng
  */
@@ -17,4 +19,6 @@ public interface ZzUserMapper {
     int updateByPrimaryKeySelective(ZzUser record);
 
     int updateByPrimaryKey(ZzUser record);
+
+    List<ZzUser> listAll();
 }

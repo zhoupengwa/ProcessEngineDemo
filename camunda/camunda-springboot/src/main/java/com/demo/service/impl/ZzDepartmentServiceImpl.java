@@ -1,10 +1,14 @@
 package com.demo.service.impl;
 
+import com.demo.domain.dto.ZzRole;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.demo.mapper.ZzDepartmentMapper;
 import com.demo.domain.dto.ZzDepartment;
 import com.demo.service.ZzDepartmentService;
+
+import java.util.List;
+
 /**
  * @author   zhoupeng
  * 
@@ -43,6 +47,11 @@ public class ZzDepartmentServiceImpl implements ZzDepartmentService{
     @Override
     public int updateByPrimaryKey(ZzDepartment record) {
         return zzDepartmentMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<ZzDepartment> listAll(ZzDepartment department) {
+        return zzDepartmentMapper.listAll();
     }
 
 }
