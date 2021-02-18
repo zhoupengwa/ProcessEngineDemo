@@ -26,7 +26,7 @@
             <td height="30">${user.roleName}</td>
             <td height="30">${user.roleId}:${user.departmentId}</td>
             <td height="30">${user.departmentName}:${user.roleName}</td>
-            <td><a href="/user/delete/${user.roleId}">删除</a></td>
+            <td><a href="/user/delete/${user.userId}">删除</a></td>
         </tr>
     </#list>
 
