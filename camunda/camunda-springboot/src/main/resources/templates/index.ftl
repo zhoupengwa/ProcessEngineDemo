@@ -8,6 +8,6 @@
 <h1>hello world</h1>
 <h1 style="color: red">${name}</h1>
 
-<img src="static/a.jpg" width="500" height="500"/>
+<img src="/static/a.jpg" width="500" height="500"/>
 </body>
 </html>

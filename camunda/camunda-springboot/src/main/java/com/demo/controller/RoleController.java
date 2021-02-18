@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 /**
  * @author zhoupeng
  */
 @Controller
+@RequestMapping("/role")
 public class RoleController {
 
 
@@ -46,6 +49,14 @@ public class RoleController {
         role.setRoleName(roleName);
         zzRoleService.insert(role);
         return "redirect:/role/list";
+    }
+
+
+    @GetMapping("/list")
+    public String list(Model model) {
+        List<ZzRole> roleList = zzRoleService.listAll(null);
+        model.addAttribute("roleList", roleList);
+        return "role_list";
     }
 
 }

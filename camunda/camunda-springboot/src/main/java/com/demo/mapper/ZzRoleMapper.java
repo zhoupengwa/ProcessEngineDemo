@@ -2,6 +2,8 @@ package com.demo.mapper;
 
 import com.demo.domain.dto.ZzRole;
 
+import java.util.List;
+
 /**
  * @author zhoupeng
  */
@@ -17,4 +19,7 @@ public interface ZzRoleMapper {
     int updateByPrimaryKeySelective(ZzRole record);
 
     int updateByPrimaryKey(ZzRole record);
+
+    List<ZzRole> listAll();
+
 }

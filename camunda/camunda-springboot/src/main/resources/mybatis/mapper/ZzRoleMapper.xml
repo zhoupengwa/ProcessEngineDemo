@@ -1,67 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.mapper.ZzRoleMapper">
-  <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZzRole">
-    <!--@mbg.generated-->
-    <!--@Table zz_role-->
-    <id column="role_id" property="roleId" />
-    <result column="role_name" property="roleName" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    role_id, role_name
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from zz_role
-    where role_id = #{roleId}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    <!--@mbg.generated-->
-    delete from zz_role
-    where role_id = #{roleId}
-  </delete>
-  <insert id="insert" parameterType="com.demo.domain.dto.ZzRole">
-    <!--@mbg.generated-->
-    insert into zz_role (role_id, role_name)
-    values (#{roleId}, #{roleName})
-  </insert>
-  <insert id="insertSelective" parameterType="com.demo.domain.dto.ZzRole">
-    <!--@mbg.generated-->
-    insert into zz_role
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        role_id,
-      </if>
-      <if test="roleName != null">
-        role_name,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        #{roleId},
-      </if>
-      <if test="roleName != null">
-        #{roleName},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZzRole">
-    <!--@mbg.generated-->
-    update zz_role
-    <set>
-      <if test="roleName != null">
-        role_name = #{roleName},
-      </if>
-    </set>
-    where role_id = #{roleId}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZzRole">
-    <!--@mbg.generated-->
-    update zz_role
-    set role_name = #{roleName}
-    where role_id = #{roleId}
-  </update>
+    <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZzRole">
+        <!--@mbg.generated-->
+        <!--@Table zz_role-->
+        <id column="role_id" property="roleId"/>
+        <result column="role_name" property="roleName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        role_id, role_name
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from zz_role
+        where role_id = #{roleId}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from zz_role
+        where role_id = #{roleId}
+    </delete>
+    <insert id="insert" parameterType="com.demo.domain.dto.ZzRole">
+        <!--@mbg.generated-->
+        insert into zz_role (role_id, role_name)
+        values (#{roleId}, #{roleName})
+    </insert>
+    <insert id="insertSelective" parameterType="com.demo.domain.dto.ZzRole">
+        <!--@mbg.generated-->
+        insert into zz_role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="roleName != null">
+                role_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">
+                #{roleId},
+            </if>
+            <if test="roleName != null">
+                #{roleName},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZzRole">
+        <!--@mbg.generated-->
+        update zz_role
+        <set>
+            <if test="roleName != null">
+                role_name = #{roleName},
+            </if>
+        </set>
+        where role_id = #{roleId}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZzRole">
+        <!--@mbg.generated-->
+        update zz_role
+        set role_name = #{roleName}
+        where role_id = #{roleId}
+    </update>
+
+    <select id="listAll" resultType="com.demo.domain.dto.ZzRole">
+        select role_id, role_name
+        from zz_role
+    </select>
 </mapper>

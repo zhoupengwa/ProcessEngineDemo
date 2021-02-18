@@ -5,6 +5,9 @@ import javax.annotation.Resource;
 import com.demo.mapper.ZzRoleMapper;
 import com.demo.domain.dto.ZzRole;
 import com.demo.service.ZzRoleService;
+
+import java.util.List;
+
 /**
  * @author   zhoupeng
  * 
@@ -43,6 +46,12 @@ public class ZzRoleServiceImpl implements ZzRoleService{
     @Override
     public int updateByPrimaryKey(ZzRole record) {
         return zzRoleMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<ZzRole> listAll(ZzRole role) {
+
+        return zzRoleMapper.listAll();
     }
 
 }

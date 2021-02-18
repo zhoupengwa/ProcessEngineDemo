@@ -1,11 +1,13 @@
 package com.demo.service;
 
 import com.demo.domain.dto.ZzRole;
-    /**
- * @author   zhoupeng
- * 
+
+import java.util.List;
+
+/**
+ * @author zhoupeng
  */
-public interface ZzRoleService{
+public interface ZzRoleService {
 
 
     int deleteByPrimaryKey(String roleId);
@@ -20,4 +22,5 @@ public interface ZzRoleService{
 
     int updateByPrimaryKey(ZzRole record);
 
+    List<ZzRole> listAll(ZzRole role);
 }
