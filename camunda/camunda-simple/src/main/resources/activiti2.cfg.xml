@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="processEngineConfiguration1"
-          class="com.demo.MyProcessEngineConfiguration">
+          class="com.demo.ch1.MyProcessEngineConfiguration">
 
         <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1/camunda"/>
         <property name="jdbcDriver" value="com.mysql.jdbc.Driver"/>
@@ -17,7 +17,7 @@
         <!--<property name="historyLevel" value="HISTORY_LEVEL_FULL"/>-->
     </bean>
 
-    <bean id="testUser" class="com.demo.TestUser">
+    <bean id="testUser" class="com.demo.ch1.TestUser">
         <property name="age" value="19"/>
         <property name="name" value="zhangsan"/>
     </bean>

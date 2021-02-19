@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.ch1;
 
 /**
  * @author zhoupeng

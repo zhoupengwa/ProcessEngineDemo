@@ -1,6 +1,5 @@
-package com.demo;
+package com.demo.ch1;
 
-import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.ProcessEngineConfiguration;
 
 import java.io.InputStream;

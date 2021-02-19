@@ -17,12 +17,12 @@
         <!--<property name="historyLevel" value="HISTORY_LEVEL_FULL"/>-->
         <property name="processEnginePlugins">
             <list>
-                <bean id="myProcessEnginePlugin" class="com.demo.MyProcessEnginePlugin"/>
+                <bean id="myProcessEnginePlugin" class="com.demo.ch1.MyProcessEnginePlugin"/>
             </list>
         </property>
     </bean>
 
-    <bean id="testUser" class="com.demo.TestUser">
+    <bean id="testUser" class="com.demo.ch1.TestUser">
         <property name="age" value="19"/>
         <property name="name" value="zhangsan"/>
     </bean>

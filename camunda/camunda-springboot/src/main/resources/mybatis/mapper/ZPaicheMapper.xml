@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.ZPaicheMapper">
+    <resultMap id="BaseResultMap" type="com.demo.domain.dto.ZPaiche">
+        <!--@mbg.generated-->
+        <!--@Table z_paiche-->
+        <id column="id" property="id"/>
+        <result column="pid" property="pid"/>
+        <result column="user_id" property="userId"/>
+        <result column="start_date_time" property="startDateTime"/>
+        <result column="persons" property="persons"/>
+        <result column="phone" property="phone"/>
+        <result column="start_position" property="startPosition"/>
+        <result column="end_position" property="endPosition"/>
+        <result column="driver" property="driver"/>
+        <result column="car" property="car"/>
+        <result column="bzhu" property="bzhu"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, pid, user_id, start_date_time, persons, phone, start_position, end_position,
+        driver, car, bzhu, create_time
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from z_paiche
+        where id = #{id}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from z_paiche
+        where id = #{id}
+    </delete>
+    <insert id="insert" parameterType="com.demo.domain.dto.ZPaiche">
+        <!--@mbg.generated-->
+        insert into z_paiche (id, pid, user_id, start_date_time, persons, phone, start_position,
+        end_position, driver, car, bzhu, create_time)
+        values (#{id}, #{pid}, #{userId}, #{startDateTime}, #{persons}, #{phone}, #{startPosition},
+        #{endPosition}, #{driver}, #{car}, #{bzhu}, #{createTime})
+    </insert>
+    <insert id="insertSelective" parameterType="com.demo.domain.dto.ZPaiche">
+        <!--@mbg.generated-->
+        insert into z_paiche
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="pid != null">
+                pid,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="startDateTime != null">
+                start_date_time,
+            </if>
+            <if test="persons != null">
+                persons,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="startPosition != null">
+                start_position,
+            </if>
+            <if test="endPosition != null">
+                end_position,
+            </if>
+            <if test="driver != null">
+                driver,
+            </if>
+            <if test="car != null">
+                car,
+            </if>
+            <if test="bzhu != null">
+                bzhu,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="pid != null">
+                #{pid},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="startDateTime != null">
+                #{startDateTime},
+            </if>
+            <if test="persons != null">
+                #{persons},
+            </if>
+            <if test="phone != null">
+                #{phone},
+            </if>
+            <if test="startPosition != null">
+                #{startPosition},
+            </if>
+            <if test="endPosition != null">
+                #{endPosition},
+            </if>
+            <if test="driver != null">
+                #{driver},
+            </if>
+            <if test="car != null">
+                #{car},
+            </if>
+            <if test="bzhu != null">
+                #{bzhu},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.dto.ZPaiche">
+        <!--@mbg.generated-->
+        update z_paiche
+        <set>
+            <if test="pid != null">
+                pid = #{pid},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="startDateTime != null">
+                start_date_time = #{startDateTime},
+            </if>
+            <if test="persons != null">
+                persons = #{persons},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="startPosition != null">
+                start_position = #{startPosition},
+            </if>
+            <if test="endPosition != null">
+                end_position = #{endPosition},
+            </if>
+            <if test="driver != null">
+                driver = #{driver},
+            </if>
+            <if test="car != null">
+                car = #{car},
+            </if>
+            <if test="bzhu != null">
+                bzhu = #{bzhu},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.demo.domain.dto.ZPaiche">
+        <!--@mbg.generated-->
+        update z_paiche
+        set pid = #{pid},
+        user_id = #{userId},
+        start_date_time = #{startDateTime},
+        persons = #{persons},
+        phone = #{phone},
+        start_position = #{startPosition},
+        end_position = #{endPosition},
+        driver = #{driver},
+        car = #{car},
+        bzhu = #{bzhu},
+        create_time = #{createTime}
+        where id = #{id}
+    </update>
+</mapper>

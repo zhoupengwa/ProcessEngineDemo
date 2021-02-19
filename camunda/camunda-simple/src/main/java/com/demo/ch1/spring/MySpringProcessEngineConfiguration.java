@@ -1,4 +1,4 @@
-package com.demo.spring;
+package com.demo.ch1.spring;
 
 import org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration;
 

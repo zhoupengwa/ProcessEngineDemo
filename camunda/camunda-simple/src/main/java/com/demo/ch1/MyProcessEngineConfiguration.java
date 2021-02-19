@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.ch1;
 
 import org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration;
 
