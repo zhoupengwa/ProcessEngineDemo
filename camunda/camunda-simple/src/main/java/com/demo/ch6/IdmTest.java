@@ -27,7 +27,7 @@ public class IdmTest {
 
     @Before
     public void init() {
-        ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("com.demo.ch6/camunda.cfg.xml");
+        ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("com.demo/ch6/camunda.cfg.xml");
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         identityService = processEngine.getIdentityService();
         System.out.println(identityService);
@@ -51,7 +51,7 @@ public class IdmTest {
         user.setEmail("123@qq.com");
         user.setFirstName("周");
         user.setLastName("鹏");
-        user.setPassword("1");
+        user.setDbPassword("1");
         user.setSalt("1");
         identityService.saveUser(user);
     }
@@ -63,11 +63,11 @@ public class IdmTest {
     @Test
     public void saveUser2() {
         UserEntity user = new UserEntity();
-        user.setId("peng2");
+        user.setId("peng4");
         user.setEmail("123@qq.com");
         user.setFirstName("周2");
         user.setLastName("鹏2");
-        user.setPassword("1");
+        user.setPassword("123");
         user.setSalt("1");
         identityService.saveUser(user);
     }

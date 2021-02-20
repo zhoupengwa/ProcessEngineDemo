@@ -11,6 +11,7 @@
         <property name="jdbcUsername" value="root"/>
         <property name="jdbcPassword" value="123456"/>
         <property name="databaseSchemaUpdate" value="false"/>
+        <property name="historyLevel" value="HISTORY_LEVEL_FULL"/>
         <property name="dbHistoryUsed" value="true"/>
     </bean>
 

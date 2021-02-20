@@ -3,6 +3,7 @@ package com.demo.config;
 import lombok.extern.slf4j.Slf4j;
 import org.camunda.bpm.engine.*;
 import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
+import org.camunda.bpm.engine.impl.history.HistoryLevel;
 import org.camunda.bpm.engine.spring.ProcessEngineFactoryBean;
 import org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class CamundaConfig {
         processEngineConfiguration.setDataSource(dataSource);
         processEngineConfiguration.setTransactionManager(transactionManager);
         processEngineConfiguration.setDatabaseType("mysql");
+        processEngineConfiguration.setHistoryLevel(HistoryLevel.HISTORY_LEVEL_FULL);
         return processEngineConfiguration;
     }
 
