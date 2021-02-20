@@ -98,18 +98,18 @@ org.camunda.bpm.engine.ProcessEngineException: historyLevel mismatch: configurat
 	at org.camunda.bpm.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:111)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:973)
 	at com.xylink.ProcessEngineTest4.main(ProcessEngineTest4.java:23)
-2021-01-26 11:17:18.674 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.MyProcessEnginePlugin@14dd9eb7' activated on process engine 'default' 
-2021-01-26 11:17:38.142 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.MyProcessEnginePlugin@14dd9eb7' activated on process engine 'default' 
-2021-01-26 11:18:08.667 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.MyProcessEnginePlugin@14dd9eb7' activated on process engine 'default' 
+2021-01-26 11:17:18.674 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.ch1.MyProcessEnginePlugin@14dd9eb7' activated on process engine 'default'
+2021-01-26 11:17:38.142 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.ch1.MyProcessEnginePlugin@14dd9eb7' activated on process engine 'default'
+2021-01-26 11:18:08.667 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.ch1.MyProcessEnginePlugin@14dd9eb7' activated on process engine 'default'
 2021-01-26 11:19:27.768 [main] INFO  org.camunda.feel.FeelEngine - Engine created. [value-mapper: CompositeValueMapper(List(org.camunda.feel.impl.JavaValueMapper@7bba5817)), function-provider: org.camunda.bpm.dmn.feel.impl.scala.function.CustomFunctionTransformer@1972e513, clock: SystemClock, configuration: Configuration(false)] 
 2021-01-26 11:19:31.241 [main] INFO  org.camunda.bpm.connect - CNCT-01004 Discovered provider for connector id 'http-connector' and class 'org.camunda.connect.httpclient.impl.HttpConnectorImpl': 'org.camunda.connect.httpclient.impl.HttpConnectorProviderImpl' 
 2021-01-26 11:19:31.245 [main] INFO  org.camunda.bpm.connect - CNCT-01004 Discovered provider for connector id 'soap-http-connector' and class 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorImpl': 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorProviderImpl' 
 2021-01-26 11:19:31.534 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
 2021-01-26 11:41:24.252 [main] INFO  org.camunda.bpm.engine - ENGINE-00003 Initializing process engine for resource file:/Users/zhoupeng/IdeaProjects/activiti-demo/camunda/camunda-simple/target/classes/camunda.cfg.xml 
-2021-01-26 11:41:24.796 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.MyProcessEnginePlugin@5158b42f' activated on process engine 'default' 
+2021-01-26 11:41:24.796 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.ch1.MyProcessEnginePlugin@5158b42f' activated on process engine 'default'
 2021-01-26 11:41:24.800 [main] ERROR org.camunda.bpm.engine - ENGINE-00005 Exception while initializing process engine null 
 java.lang.NullPointerException: null
-	at com.demo.MyProcessEnginePlugin.preInit(MyProcessEnginePlugin.java:17)
+	at com.demo.ch1.MyProcessEnginePlugin.preInit(MyProcessEnginePlugin.java:17)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.invokePreInit(ProcessEngineConfigurationImpl.java:1255)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.init(ProcessEngineConfigurationImpl.java:981)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:972)
@@ -119,12 +119,12 @@ java.lang.NullPointerException: null
 	at org.camunda.bpm.engine.ProcessEngines.getProcessEngine(ProcessEngines.java:248)
 	at org.camunda.bpm.engine.ProcessEngines.getDefaultProcessEngine(ProcessEngines.java:237)
 	at org.camunda.bpm.engine.ProcessEngines.getDefaultProcessEngine(ProcessEngines.java:233)
-	at com.demo.spring.SpringProcessEngineTest.main(SpringProcessEngineTest.java:11)
+	at com.demo.ch1.spring.SpringProcessEngineTest.main(SpringProcessEngineTest.java:11)
 2021-01-26 11:42:14.037 [main] INFO  org.camunda.bpm.engine - ENGINE-00003 Initializing process engine for resource file:/Users/zhoupeng/IdeaProjects/activiti-demo/camunda/camunda-simple/target/classes/camunda.cfg.xml 
-2021-01-26 11:42:16.788 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.MyProcessEnginePlugin@78d6692f' activated on process engine 'default' 
+2021-01-26 11:42:16.788 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin 'com.demo.ch1.MyProcessEnginePlugin@78d6692f' activated on process engine 'default'
 2021-01-26 11:42:16.796 [main] ERROR org.camunda.bpm.engine - ENGINE-00005 Exception while initializing process engine null 
 java.lang.NullPointerException: null
-	at com.demo.MyProcessEnginePlugin.preInit(MyProcessEnginePlugin.java:17)
+	at com.demo.ch1.MyProcessEnginePlugin.preInit(MyProcessEnginePlugin.java:17)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.invokePreInit(ProcessEngineConfigurationImpl.java:1255)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.init(ProcessEngineConfigurationImpl.java:981)
 	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:972)
@@ -134,7 +134,7 @@ java.lang.NullPointerException: null
 	at org.camunda.bpm.engine.ProcessEngines.getProcessEngine(ProcessEngines.java:248)
 	at org.camunda.bpm.engine.ProcessEngines.getDefaultProcessEngine(ProcessEngines.java:237)
 	at org.camunda.bpm.engine.ProcessEngines.getDefaultProcessEngine(ProcessEngines.java:233)
-	at com.demo.spring.SpringProcessEngineTest.main(SpringProcessEngineTest.java:11)
+	at com.demo.ch1.spring.SpringProcessEngineTest.main(SpringProcessEngineTest.java:11)
 2021-01-26 16:05:40.490 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
 2021-01-26 16:05:40.797 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
 2021-01-26 16:05:43.134 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
