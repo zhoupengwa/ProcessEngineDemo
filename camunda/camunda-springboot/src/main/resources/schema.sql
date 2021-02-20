@@ -55,3 +55,19 @@ create table z_log
     primary key (id)
 );
 
+
+INSERT INTO `camunda`.`zz_user`(`user_id`, `department_id`, `role_id`, `username`, `psd`) VALUES ('apple', '003', '002', 'apple', '123');
+INSERT INTO `camunda`.`zz_user`(`user_id`, `department_id`, `role_id`, `username`, `psd`) VALUES ('bear', '002', '001', 'bear', '123');
+INSERT INTO `camunda`.`zz_user`(`user_id`, `department_id`, `role_id`, `username`, `psd`) VALUES ('dave', '004', '002', 'dave', '123');
+INSERT INTO `camunda`.`zz_user`(`user_id`, `department_id`, `role_id`, `username`, `psd`) VALUES ('giraffe', '004', '001', 'giraffe', '123');
+INSERT INTO `camunda`.`zz_user`(`user_id`, `department_id`, `role_id`, `username`, `psd`) VALUES ('kitty', '001', '002', 'kitty', '123');
+INSERT INTO `camunda`.`zz_user`(`user_id`, `department_id`, `role_id`, `username`, `psd`) VALUES ('lucy', '002', '002', 'lucy', '123');
+
+INSERT INTO `camunda`.`zz_role`(`role_id`, `role_name`) VALUES ('001', '部门领导');
+INSERT INTO `camunda`.`zz_role`(`role_id`, `role_name`) VALUES ('002', '职员');
+
+INSERT INTO `camunda`.`zz_department`(`department_id`, `department_name`) VALUES ('001', '经理部');
+INSERT INTO `camunda`.`zz_department`(`department_id`, `department_name`) VALUES ('002', '财务办');
+INSERT INTO `camunda`.`zz_department`(`department_id`, `department_name`) VALUES ('003', '车管办');
+INSERT INTO `camunda`.`zz_department`(`department_id`, `department_name`) VALUES ('004', '开发办');
+INSERT INTO `camunda`.`zz_department`(`department_id`, `department_name`) VALUES ('005', '业务办');
