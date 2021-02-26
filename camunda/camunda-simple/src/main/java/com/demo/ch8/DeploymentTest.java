@@ -55,6 +55,7 @@ public class DeploymentTest {
                 .tenantId("a")
                 .addClasspathResource("com.demo/ch8/diagram_1.bpmn")
 //                .addClasspathResource("com.demo/ch8/diagram_2.bpmn")
+                //                .nameFromDeployment("101")
                 .deploy();
 
         System.out.println(deploymentBuilder);
@@ -63,7 +64,7 @@ public class DeploymentTest {
 
     @Test
     public void deleteDeployment() {
-        String deploymentId = "1";
+        String deploymentId = "4701";
         repositoryService.deleteDeployment(deploymentId, true);
     }
 
