@@ -1,9 +1,15 @@
 package com.demo.ch9;
 
+import com.google.common.collect.Lists;
 import org.camunda.bpm.engine.*;
+import org.camunda.bpm.engine.history.HistoricActivityInstance;
+import org.camunda.bpm.engine.history.HistoricProcessInstance;
+import org.camunda.bpm.engine.history.HistoricTaskInstance;
 import org.camunda.bpm.engine.repository.Deployment;
 import org.camunda.bpm.engine.repository.DeploymentBuilder;
+import org.camunda.bpm.engine.runtime.ActivityInstance;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
+import org.camunda.bpm.engine.runtime.ProcessInstanceQuery;
 import org.camunda.bpm.engine.runtime.ProcessInstantiationBuilder;
 import org.camunda.bpm.engine.task.Task;
 import org.camunda.bpm.engine.task.TaskQuery;
@@ -23,6 +29,9 @@ public class RuntimeServiceTest {
 
     private TaskService taskService;
 
+    private HistoryService historyService;
+    private IdentityService identityService;
+
     @Before
     public void init() {
         processEngineConfiguration = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("com.demo/ch9/camunda.cfg.xml");
@@ -30,6 +39,8 @@ public class RuntimeServiceTest {
         repositoryService = processEngine.getRepositoryService();
         runtimeService = processEngine.getRuntimeService();
         taskService = processEngine.getTaskService();
+        historyService = processEngine.getHistoryService();
+        identityService = processEngine.getIdentityService();
     }
 
 
@@ -96,7 +107,7 @@ public class RuntimeServiceTest {
      */
     @Test
     public void complete() {
-        String taskId = "4902";
+        String taskId = "5503";
         taskService.complete(taskId);
     }
 
@@ -164,11 +175,10 @@ public class RuntimeServiceTest {
 
 
     /**
-     *
-     *  select distinct RES.* from ACT_RU_EXECUTION RES inner join
-     *  ACT_RE_PROCDEF P on RES.PROC_DEF_ID_ = P.ID_ WHERE
-     *
-     *  RES.PARENT_ID_ is null and RES.PROC_INST_ID_ = ? order by RES.ID_ asc LIMIT ? OFFSET ?
+     * select distinct RES.* from ACT_RU_EXECUTION RES inner join
+     * ACT_RE_PROCDEF P on RES.PROC_DEF_ID_ = P.ID_ WHERE
+     * <p>
+     * RES.PARENT_ID_ is null and RES.PROC_INST_ID_ = ? order by RES.ID_ asc LIMIT ? OFFSET ?
      */
     @Test
     public void createProcessInstanceQuery() {
@@ -183,4 +193,194 @@ public class RuntimeServiceTest {
             System.out.println("当前实例正在运转");
         }
     }
+
+
+    /**
+     * select distinct RES.* from
+     * ( SELECT SELF.*, DEF.NAME_, DEF.VERSION_ FROM ACT_HI_PROCINST
+     * SELF LEFT JOIN ACT_RE_PROCDEF DEF ON SELF.PROC_DEF_ID_ = DEF.ID_
+     * <p>
+     * WHERE SELF.PROC_INST_ID_ = ? and STATE_ = ? ) RES order by RES.ID_ asc LIMIT ? OFFSET ?
+     */
+    @Test
+    public void createHistoricProcessInstanceQuery() {
+        String processInstanceId = "5301";
+        HistoricProcessInstance historicProcessInstance = historyService.createHistoricProcessInstanceQuery()
+//                .completed()
+                .processInstanceId(processInstanceId)
+                .singleResult();
+
+        if (historicProcessInstance.getEndTime() != null) {
+            System.out.println("当前实例结束了");
+        } else {
+            System.out.println("当前实例正在运转");
+        }
+    }
+
+
+    /**
+     * select RES.* FROM ACT_HI_ACTINST RES WHERE RES.PROC_INST_ID_ = ? order by RES.ID_ asc LIMIT ? OFFSET ?
+     */
+    @Test
+    public void createHistoricActivityInstanceQuery() {
+        String processInstanceId = "5301";
+        List<HistoricActivityInstance> list = historyService.createHistoricActivityInstanceQuery()
+                .processInstanceId(processInstanceId)
+                .list();
+
+        for (HistoricActivityInstance historicActivityInstance : list) {
+            System.out.println(historicActivityInstance.toString());
+        }
+    }
+
+
+    /**
+     * select distinct RES.* from ACT_HI_TASKINST RES WHERE RES.PROC_INST_ID_ = ? order by RES.ID_ asc LIMIT ? OFFSET ?
+     */
+    @Test
+    public void createHistoricTaskInstanceQuery() {
+        String processInstanceId = "5301";
+        List<HistoricTaskInstance> list = historyService.createHistoricTaskInstanceQuery()
+                .processInstanceId(processInstanceId)
+                .list();
+        for (HistoricTaskInstance historicTaskInstance : list) {
+            System.out.println(historicTaskInstance);
+        }
+    }
+
+
+    @Test
+    public void setAuthenticatedUserId() {
+        identityService.setAuthenticatedUserId("peng1212");
+        runtimeService.startProcessInstanceByKey("leave");
+    }
+
+
+    /**
+     * delete from ACT_RU_IDENTITYLINK where ID_ = ?
+     * delete from ACT_RU_TASK where ID_ = ? and REV_ = ?
+     * delete from ACT_RU_EXECUTION where ID_ = ? and REV_ = ?
+     * UPDATE ACT_HI_ACTINST SET EXECUTION_ID_ = ?, PROC_DEF_KEY_ = ?, PROC_DEF_ID_ = ?, ACT_ID_ = ?, ACT_NAME_ = ?, ACT_TYPE_ = ?, PARENT_ACT_INST_ID_ = ? , END_TIME_ = ? , DURATION_ = ? , ACT_INST_STATE_ = ? WHERE ID_ = ?
+     * update ACT_HI_PROCINST set PROC_DEF_ID_ = ?, PROC_DEF_KEY_ = ?, BUSINESS_KEY_ = ?, END_ACT_ID_ = ?, DELETE_REASON_ = ?, SUPER_PROCESS_INSTANCE_ID_ = ?, STATE_ = ? , END_TIME_ = ? , DURATION_ = ? where ID_ = ?
+     * update ACT_HI_TASKINST set EXECUTION_ID_ = ?, PROC_DEF_KEY_ = ?, PROC_DEF_ID_ = ?, NAME_ = ?, PARENT_TASK_ID_ = ?, DESCRIPTION_ = ?, OWNER_ = ?, ASSIGNEE_ = ?, DELETE_REASON_ = ?, TASK_DEF_KEY_ = ?, PRIORITY_ = ?, DUE_DATE_ = ?, FOLLOW_UP_DATE_ = ?, CASE_INST_ID_ = ? , END_TIME_ = ? , DURATION_ = ? where ID_ = ?
+     */
+    @Test
+    public void deleteProcessInstance() {
+        String processInstanceId = "5401";
+        String reason = "测试删除";
+        runtimeService.deleteProcessInstance(processInstanceId, reason);
+    }
+
+
+    @Test
+    public void deleteProcessInstance2() {
+        List<String> list = Lists.newArrayList("5701", "5901");
+        runtimeService.deleteProcessInstances(list, "测试批量删除", true, true);
+    }
+
+
+    /**
+     * select * from ACT_RU_EXECUTION where PROC_INST_ID_ = ?
+     */
+    @Test
+    public void getActiveActivityIds() {
+        //执行实例ID
+        String executionId = "6001";
+        List<String> activeActivityIds = runtimeService.getActiveActivityIds(executionId);
+        System.out.println("####" + activeActivityIds);
+    }
+
+
+    @Test
+    public void getActivityInstance() {
+        //执行实例ID
+        String processInstanceId = "6001";
+        ActivityInstance activityInstance = runtimeService.getActivityInstance(processInstanceId);
+        System.out.println(activityInstance);
+    }
+
+
+    /**
+     * update ACT_RE_PROCDEF set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE ID_ = ?
+     * 2(Integer), leave:1:5103(String)
+     * update ACT_RU_JOBDEF set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROC_DEF_ID_ = ?
+     */
+    @Test
+    public void suspendProcessDefinitionById() {
+        //挂起流程定义
+        String processDefinitionById = "leave:1:5103";
+        //SUSPENSION_STATE_ 2代表被挂起了
+        repositoryService.suspendProcessDefinitionById(processDefinitionById);
+    }
+
+
+    /**
+     * update ACT_RE_PROCDEF set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE ID_ = ?
+     * 1(Integer), leave:1:5103(String)
+     * <p>
+     * update ACT_RU_JOBDEF set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROC_DEF_ID_ = ?
+     */
+    @Test
+    public void updateProcessDefinitionSuspensionState() {
+        //激活流程定义
+        String processDefinitionById = "leave:1:5103";
+        repositoryService.updateProcessDefinitionSuspensionState()
+                .byProcessDefinitionId(processDefinitionById)
+                .activate();
+    }
+
+
+    /**
+     * update ACT_RU_EXT_TASK SET SUSPENSION_STATE_ = ? WHERE PROC_DEF_ID_ = ?
+     * update ACT_RU_JOB set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROCESS_DEF_ID_ = ?
+     * update ACT_RU_JOB set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROCESS_DEF_ID_ = ? and HANDLER_TYPE_ = ?
+     * update ACT_RU_TASK set REV_ = REV_ + 1, SUSPENSION_STATE_ = ?, CREATE_TIME_ = CREATE_TIME_ WHERE PROC_DEF_ID_ = ?
+     * update ACT_RU_EXECUTION set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROC_DEF_ID_ = ?
+     * update ACT_RE_PROCDEF set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE ID_ = ?
+     * update ACT_HI_PROCINST set PROC_DEF_ID_ = ?, PROC_DEF_KEY_ = ?, BUSINESS_KEY_ = ?, END_ACT_ID_ = ?, DELETE_REASON_ = ?, SUPER_PROCESS_INSTANCE_ID_ = ?, STATE_ = ? where ID_ = ?
+     * update ACT_RU_JOBDEF set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROC_DEF_ID_ = ?
+     */
+    @Test
+    public void activateProcessDefinitionById() {
+        //激活流程定义 以及 流程实例
+        String processDefinitionById = "leave:1:5103";
+        repositoryService.updateProcessDefinitionSuspensionState()
+                .byProcessDefinitionId(processDefinitionById)
+                .includeProcessInstances(true)
+                .activate();
+    }
+
+
+    /**
+     * update ACT_RU_EXT_TASK SET SUSPENSION_STATE_ = ? WHERE PROC_INST_ID_ = ?
+     * update ACT_RU_JOB set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROCESS_INSTANCE_ID_ = ?
+     * update ACT_RU_TASK set REV_ = REV_ + 1, SUSPENSION_STATE_ = ?, CREATE_TIME_ = CREATE_TIME_ WHERE PROC_INST_ID_ = ?
+     * update ACT_RU_EXECUTION set REV_ = REV_ + 1, SUSPENSION_STATE_ = ? WHERE PROC_INST_ID_ = ?
+     * ACT_HI_PROCINST set PROC_DEF_ID_ = ?, PROC_DEF_KEY_ = ?, BUSINESS_KEY_ = ?, END_ACT_ID_ = ?, DELETE_REASON_ = ?, SUPER_PROCESS_INSTANCE_ID_ = ?, STATE_ = ? where ID_ = ?
+     */
+    @Test
+    public void suspendProcessInstanceById2() {
+        //挂起流程实例
+        runtimeService.suspendProcessInstanceById("5501");
+    }
+
+
+    @Test
+    public void updateProcessInstanceSuspensionState() {
+        ProcessInstanceQuery processInstanceQuery = runtimeService.createProcessInstanceQuery();
+        //挂起流程实例,可以一次性挂起多个
+        runtimeService.updateProcessInstanceSuspensionState()
+        //.byProcessInstanceQuery(processInstanceQuery)//根据查询条件来挂起
+                .byProcessInstanceId("5501")
+        //.activate();//激活实例
+                .suspend();
+    }
+
+    @Test
+    public void activateProcessInstanceById() {
+        //激活流程实例
+        runtimeService.activateProcessInstanceById("5501");
+    }
+
+
 }

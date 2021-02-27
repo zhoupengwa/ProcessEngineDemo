@@ -13,6 +13,9 @@
         <property name="databaseSchemaUpdate" value="false"/>
         <property name="historyLevel" value="HISTORY_LEVEL_FULL"/>
         <property name="dbHistoryUsed" value="true"/>
+
+        <!--关闭租户校验-->
+        <property name="tenantCheckEnabled" value="false"/>
     </bean>
 
     <bean id="testUser" class="com.demo.ch1.TestUser">
