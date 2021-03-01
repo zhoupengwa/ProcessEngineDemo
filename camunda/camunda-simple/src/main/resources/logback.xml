@@ -58,13 +58,6 @@
         <appender-ref ref="file"/>
     </logger>
 
-
-    <logger name="javax.activation" level="info" additivity="false">
-        <appender-ref ref="stdout"/>
-        <appender-ref ref="file"/>
-    </logger>
-
-
     <logger name="org.springframework" level="info" additivity="false">
         <appender-ref ref="stdout"/>
         <appender-ref ref="file"/>
