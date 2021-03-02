@@ -62,10 +62,16 @@ public class DeploymentTest {
         System.out.println(deployment);
     }
 
+    /**
+     * delete B from ACT_GE_BYTEARRAY B inner join ACT_HI_JOB_LOG J on B.ID_ = J.JOB_EXCEPTION_STACK_ID_ and J.JOB_EXCEPTION_STACK_ID_ is not null and J.DEPLOYMENT_ID_ = ?
+     * delete from ACT_GE_BYTEARRAY where DEPLOYMENT_ID_ = ?
+     * delete from ACT_RE_DEPLOYMENT where ID_ = ?
+     * delete from ACT_HI_JOB_LOG where DEPLOYMENT_ID_ = ?
+     */
     @Test
     public void deleteDeployment() {
         String deploymentId = "4701";
-        repositoryService.deleteDeployment(deploymentId, true);
+        repositoryService.deleteDeployment(deploymentId, false);
     }
 
 

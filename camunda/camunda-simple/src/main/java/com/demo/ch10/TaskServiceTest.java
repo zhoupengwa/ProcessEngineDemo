@@ -37,7 +37,7 @@ public class TaskServiceTest {
         taskService = processEngine.getTaskService();
         historyService = processEngine.getHistoryService();
         identityService = processEngine.getIdentityService();
-        //initGroupUser();
+//        initGroupUser();
     }
 
     private void initGroupUser() {
@@ -164,6 +164,7 @@ public class TaskServiceTest {
             System.out.println("#############");
         }
     }
+
 
 
     @Test

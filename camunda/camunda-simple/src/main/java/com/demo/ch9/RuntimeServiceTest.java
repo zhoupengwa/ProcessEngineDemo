@@ -73,6 +73,13 @@ public class RuntimeServiceTest {
         System.out.println(processInstance.getId() + "," + processInstance.getBusinessKey() + "," + processInstance.getProcessDefinitionId());
     }
 
+    @Test
+    public void startProcessInstanceById() {
+        String processInstanceId= "leave:4:2203";
+        ProcessInstance processInstance = runtimeService.startProcessInstanceById(processInstanceId);
+        System.out.println(processInstance.getId() + "," + processInstance.getBusinessKey() + "," + processInstance.getProcessDefinitionId());
+    }
+
 
     /**
      * select distinct RES.REV_, RES.ID_, RES.NAME_, RES.PARENT_TASK_ID_,
