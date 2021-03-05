@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_13yuce4" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.5.0">
+  <bpmn:process id="scriptTask" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0mr15w0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_0s92a9m">
+      <bpmn:incoming>Flow_16hmfzw</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0mr15w0" sourceRef="StartEvent_1" targetRef="Activity_1a0m850" />
+    <bpmn:sequenceFlow id="Flow_16hmfzw" sourceRef="Activity_1a0m850" targetRef="Event_0s92a9m" />
+    <bpmn:scriptTask id="Activity_1a0m850" name="脚本任务" scriptFormat="javascript">
+      <bpmn:incoming>Flow_0mr15w0</bpmn:incoming>
+      <bpmn:outgoing>Flow_16hmfzw</bpmn:outgoing>
+      <bpmn:script>var result=3;execution.setVariable('foo',result);</bpmn:script>
+    </bpmn:scriptTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="scriptTask">
+      <bpmndi:BPMNEdge id="Flow_0mr15w0_di" bpmnElement="Flow_0mr15w0">
+        <di:waypoint x="215" y="120" />
+        <di:waypoint x="360" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16hmfzw_di" bpmnElement="Flow_16hmfzw">
+        <di:waypoint x="460" y="120" />
+        <di:waypoint x="692" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0s92a9m_di" bpmnElement="Event_0s92a9m">
+        <dc:Bounds x="692" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ohrlqn_di" bpmnElement="Activity_1a0m850">
+        <dc:Bounds x="360" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
