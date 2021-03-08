@@ -43,7 +43,7 @@ public class ScriptTaskTest {
                 .tenantId("a")
 //                .addClasspathResource("com.demo/ch11/ScriptTask.bpmn")
 //                .addClasspathResource("com.demo/ch11/ScriptTask_var.bpmn")
-                .addClasspathResource("com.demo/ch11/scriptTask_juel.bpmn")
+//                .addClasspathResource("com.demo/ch11/scriptTask_juel.bpmn")
                 .addClasspathResource("com.demo/ch11/scriptTask_external.bpmn")
                 .deploy();
 
@@ -69,5 +69,13 @@ public class ScriptTaskTest {
     @Test
     public void startProcessInstanceByKey3() {
         runtimeService.startProcessInstanceByKey("scriptTask");
+    }
+
+
+    @Test
+    public void startProcessInstanceByKey4() {
+        Map<String, Object> var = new HashMap<>();
+        var.put("scriptPath", "com.demo/ch11/1.js");
+        runtimeService.startProcessInstanceByKey("scriptTask", var);
     }
 }
