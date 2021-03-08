@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_03k9qmb" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.5.0">
+  <bpmn:process id="msg" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0wpbzu5</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0c1wtew" messageRef="Message_0g26tar" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_0urryla" name="peng任务节点">
+      <bpmn:incoming>Flow_0wpbzu5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0szh9q9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0wpbzu5" sourceRef="StartEvent_1" targetRef="Activity_0urryla" />
+    <bpmn:endEvent id="Event_1ljwcsl">
+      <bpmn:incoming>Flow_0szh9q9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0szh9q9" sourceRef="Activity_0urryla" targetRef="Event_1ljwcsl" />
+  </bpmn:process>
+  <bpmn:message id="Message_0g26tar" name="msg1" />
+  <bpmn:message id="Message_1arfymh" name="msg2" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="msg">
+      <bpmndi:BPMNEdge id="Flow_0wpbzu5_di" bpmnElement="Flow_0wpbzu5">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="330" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0szh9q9_di" bpmnElement="Flow_0szh9q9">
+        <di:waypoint x="430" y="117" />
+        <di:waypoint x="552" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0f41vj4_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1qpdweb_di" bpmnElement="Activity_0urryla">
+        <dc:Bounds x="330" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ljwcsl_di" bpmnElement="Event_1ljwcsl">
+        <dc:Bounds x="552" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
