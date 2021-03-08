@@ -17,7 +17,7 @@
         <property name="tenantCheckEnabled" value="false"/>
 
         <!--自动保存脚本变量存储-->
-<!--        <property name="autoStoreScriptVariables" value="true"/>-->
+        <!--        <property name="autoStoreScriptVariables" value="true"/>-->
     </bean>
 
     <bean id="testUser" class="com.demo.ch1.TestUser">
