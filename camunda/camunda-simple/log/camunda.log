@@ -1,26 +1,84 @@
-2021-03-08 09:58:03.498 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 09:59:29.332 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:21:03.915 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:22:34.635 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:25:38.238 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:26:52.446 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:29:28.107 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:29:36.462 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:30:24.263 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:30:55.585 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:31:14.307 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:33:35.340 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:34:14.627 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:34:27.955 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:34:41.345 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:42:46.189 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:59:27.138 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 10:59:51.090 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:01:11.947 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:01:34.896 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:01:42.876 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:01:42.915 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: no processes deployed with key 'gateway1': processDefinition is null 
-org.camunda.bpm.engine.exception.NullValueException: no processes deployed with key 'gateway1': processDefinition is null
+2021-03-09 10:37:41.865 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 10:39:23.783 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 10:43:30.344 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 10:43:40.246 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 10:55:46.311 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 10:55:46.728 [main] ERROR org.camunda.bpm.engine.bpmn.parser - ENGINE-01004 Unexpected Exception with message: null  
+2021-03-09 10:55:46.730 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-09005 Could not parse BPMN process. Errors: 
+* signalEventDefinition does not have required property 'signalRef' | com.demo/ch15/signal.bpmn | line 15 | column 72 
+org.camunda.bpm.engine.ProcessEngineException: ENGINE-09005 Could not parse BPMN process. Errors: 
+* signalEventDefinition does not have required property 'signalRef' | com.demo/ch15/signal.bpmn | line 15 | column 72
+	at org.camunda.bpm.engine.impl.util.EngineUtilLogger.exceptionDuringParsing(EngineUtilLogger.java:61)
+	at org.camunda.bpm.engine.impl.util.xml.Parse.throwExceptionForErrors(Parse.java:207)
+	at org.camunda.bpm.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:271)
+	at org.camunda.bpm.engine.impl.bpmn.deployer.BpmnDeployer.transformDefinitions(BpmnDeployer.java:104)
+	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.transformResource(AbstractDefinitionDeployer.java:98)
+	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.parseDefinitionResources(AbstractDefinitionDeployer.java:73)
+	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.deploy(AbstractDefinitionDeployer.java:63)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.CacheDeployer$1.call(CacheDeployer.java:53)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.CacheDeployer$1.call(CacheDeployer.java:50)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.runWithoutAuthorization(CommandContext.java:477)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.CacheDeployer.deploy(CacheDeployer.java:50)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.DeploymentCache.deploy(DeploymentCache.java:66)
+	at org.camunda.bpm.engine.impl.persistence.entity.DeploymentManager.insertDeployment(DeploymentManager.java:64)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.deploy(DeployCmd.java:485)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd$1.call(DeployCmd.java:141)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd$1.call(DeployCmd.java:129)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.runWithoutAuthorization(CommandContext.java:477)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.doExecute(DeployCmd.java:129)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:95)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:75)
+	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
+	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
+	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
+	at org.camunda.bpm.engine.impl.RepositoryServiceImpl.deployWithResult(RepositoryServiceImpl.java:101)
+	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deployWithResult(DeploymentBuilderImpl.java:269)
+	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:265)
+	at com.demo.ch15.SignalTest.createDeployment(SignalTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2021-03-09 10:57:09.438 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 10:57:54.268 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:00:05.950 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:05:01.737 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:05:18.866 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:05:37.852 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:10:11.181 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:10:41.004 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:13:21.020 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:13:36.251 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:14:57.286 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:15:29.844 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:29:49.726 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:30:00.797 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:30:19.786 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:30:19.819 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: no processes deployed with key 'signalThrow': processDefinition is null 
+org.camunda.bpm.engine.exception.NullValueException: no processes deployed with key 'signalThrow': processDefinition is null
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -45,7 +103,7 @@ org.camunda.bpm.engine.exception.NullValueException: no processes deployed with 
 	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
 	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
 	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch13.GatewayTest.startProcessInstanceByKey(GatewayTest.java:65)
+	at com.demo.ch15.SignalTest.startProcessInstanceByKey(SignalTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,88 +130,25 @@ org.camunda.bpm.engine.exception.NullValueException: no processes deployed with 
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 11:02:06.405 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:02:06.554 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Gateway_1emyvmf (activity-leave, ProcessInstance[1801])
-	Gateway_1emyvmf
-	  ^
-	  |
-	StartEvent_1
- 
-2021-03-08 11:02:06.556 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Unknown property used in expression: ${day>1}. Cause: Cannot resolve identifier 'day' 
-org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: ${day>1}. Cause: Cannot resolve identifier 'day'
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:62)
-	at org.camunda.bpm.engine.impl.el.UelExpressionCondition.evaluate(UelExpressionCondition.java:49)
-	at org.camunda.bpm.engine.impl.el.UelExpressionCondition.evaluate(UelExpressionCondition.java:44)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior.doLeave(ExclusiveGatewayActivityBehavior.java:63)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityLeave.execute(PvmAtomicOperationActivityLeave.java:55)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityLeave.execute(PvmAtomicOperationActivityLeave.java:31)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1927)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:1994)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1943)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:51)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:43)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:60)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:49)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueIfExecutionDoesNotAffectNextOperation(PvmExecutionImpl.java:1988)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:41)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:30)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1927)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:1994)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1943)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:60)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:30)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:67)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:72)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:649)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:624)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:60)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:72)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:649)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:624)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:60)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionCreateScope.scopeCreated(PvmAtomicOperationTransitionCreateScope.java:37)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:53)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
+2021-03-09 11:30:36.872 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:30:44.217 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:30:44.253 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: no processes deployed with key 'signalThrow': processDefinition is null 
+org.camunda.bpm.engine.exception.NullValueException: no processes deployed with key 'signalThrow': processDefinition is null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
+	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
+	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.ProcessDefinitionCache.checkInvalidDefinitionByKey(ProcessDefinitionCache.java:51)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.ProcessDefinitionCache.checkInvalidDefinitionByKey(ProcessDefinitionCache.java:27)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.ResourceDefinitionCache.findDeployedLatestDefinitionByKey(ResourceDefinitionCache.java:66)
+	at org.camunda.bpm.engine.impl.persistence.deploy.cache.DeploymentCache.findDeployedLatestProcessDefinitionByKey(DeploymentCache.java:85)
+	at org.camunda.bpm.engine.impl.cmd.GetDeployedProcessDefinitionCmd.findByKey(GetDeployedProcessDefinitionCmd.java:86)
+	at org.camunda.bpm.engine.impl.cmd.GetDeployedProcessDefinitionCmd.find(GetDeployedProcessDefinitionCmd.java:73)
+	at org.camunda.bpm.engine.impl.cmd.GetDeployedProcessDefinitionCmd.execute(GetDeployedProcessDefinitionCmd.java:55)
+	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:46)
 	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
 	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
 	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
@@ -163,7 +158,7 @@ org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expressi
 	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
 	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
 	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch13.GatewayTest.startProcessInstanceByKey(GatewayTest.java:65)
+	at com.demo.ch15.SignalTest.startProcessInstanceByKey(SignalTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -190,254 +185,28 @@ org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expressi
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier 'day'
-	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
-	at org.camunda.bpm.engine.impl.juel.AstBinary$SimpleOperator.eval(AstBinary.java:27)
-	at org.camunda.bpm.engine.impl.juel.AstBinary.eval(AstBinary.java:106)
-	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
-	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
-	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
-	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:39)
-	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:57)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:90)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:59)
-	... 107 common frames omitted
-2021-03-08 11:02:53.450 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:03:37.470 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:04:20.167 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:09:23.005 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:09:36.114 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:10:01.913 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:10:25.999 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:11:31.374 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:12:13.402 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:12:47.719 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:19:16.830 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:19:31.153 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:19:54.374 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:20:31.638 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:23:08.625 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:24:18.592 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:24:18.603 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Cannot find task with id 2705: task is null 
-org.camunda.bpm.engine.exception.NullValueException: Cannot find task with id 2705: task is null
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:50)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:33)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.TaskServiceImpl.complete(TaskServiceImpl.java:172)
-	at com.demo.ch13.GatewayTest.complete(GatewayTest.java:88)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 11:24:41.060 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:29:13.901 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:29:33.899 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:30:28.316 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:30:28.465 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Gateway_0x7ykjq (activity-execute, ProcessInstance[3101])
-	Gateway_0x7ykjq
-	  ^
-	  |
-	StartEvent_1
- 
-2021-03-08 11:30:28.468 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-02004 No outgoing sequence flow for the element with id 'Gateway_0x7ykjq' could be selected for continuing the process. 
-org.camunda.bpm.engine.ProcessEngineException: ENGINE-02004 No outgoing sequence flow for the element with id 'Gateway_0x7ykjq' could be selected for continuing the process.
-	at org.camunda.bpm.engine.impl.bpmn.behavior.BpmnBehaviorLogger.stuckExecutionException(BpmnBehaviorLogger.java:50)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.InclusiveGatewayActivityBehavior.execute(InclusiveGatewayActivityBehavior.java:81)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:60)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:49)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueIfExecutionDoesNotAffectNextOperation(PvmExecutionImpl.java:1988)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:41)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:30)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1927)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:1994)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1943)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:60)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:30)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:67)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:72)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:649)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:624)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:60)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:72)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:649)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:624)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:60)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionCreateScope.scopeCreated(PvmAtomicOperationTransitionCreateScope.java:37)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:53)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:106)
-	at com.demo.ch13.GatewayTest.startProcessInstanceByKey5(GatewayTest.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 11:30:50.445 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:33:47.086 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:34:07.788 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:35:50.363 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:36:37.049 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 11:37:31.780 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 14:38:51.249 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 14:41:45.715 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 14:46:07.867 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 14:54:43.486 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 14:56:44.439 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 14:59:04.605 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:03:19.235 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:05:01.964 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:05:02.081 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Process 'null' has no default start activity (e.g. none start event), hence you cannot use 'startProcessInstanceBy...' but have to start it using one of the modeled start events (e.g. message start events): initial is null 
-org.camunda.bpm.engine.exception.NullValueException: Process 'null' has no default start activity (e.g. none start event), hence you cannot use 'startProcessInstanceBy...' but have to start it using one of the modeled start events (e.g. message start events): initial is null
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
-	at org.camunda.bpm.engine.impl.pvm.process.ProcessDefinitionImpl.ensureDefaultInitialExists(ProcessDefinitionImpl.java:57)
-	at org.camunda.bpm.engine.impl.pvm.process.ProcessDefinitionImpl.createProcessInstance(ProcessDefinitionImpl.java:71)
-	at org.camunda.bpm.engine.impl.persistence.entity.ProcessDefinitionEntity.createProcessInstance(ProcessDefinitionEntity.java:103)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:53)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch14.MessageTest.startProcessInstanceByKey(MessageTest.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 15:05:54.791 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:15:31.677 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:15:31.920 [main] ERROR org.camunda.bpm.engine.bpmn.parser - ENGINE-01004 Unexpected Exception with message: null  
-2021-03-08 15:15:31.922 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-09005 Could not parse BPMN process. Errors: 
-* attribute 'messageRef' is required | com.demo/ch14/msg_boundaryevent.bpmn | line 32 | column 74
-* Invalid 'messageRef': no message with id 'null' found. | com.demo/ch14/msg_boundaryevent.bpmn | line 32 | column 74 
+2021-03-09 11:30:56.969 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:34:36.348 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 11:34:44.590 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:15:09.342 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:15:59.378 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:17:53.189 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:20:22.834 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:26:35.060 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:26:43.242 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:27:31.696 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:28:57.631 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:29:38.768 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:41:33.885 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:44:18.582 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:45:41.556 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:51:58.719 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:52:20.507 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:52:20.593 [main] ERROR org.camunda.bpm.engine.bpmn.parser - ENGINE-01004 Unexpected Exception with message: null  
+2021-03-09 14:52:20.595 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-09005 Could not parse BPMN process. Errors: 
+* signalEventDefinition does not have required property 'signalRef' | com.demo/ch15/signal_boundary_nocancel.bpmn | line 27 | column 72 
 org.camunda.bpm.engine.ProcessEngineException: ENGINE-09005 Could not parse BPMN process. Errors: 
-* attribute 'messageRef' is required | com.demo/ch14/msg_boundaryevent.bpmn | line 32 | column 74
-* Invalid 'messageRef': no message with id 'null' found. | com.demo/ch14/msg_boundaryevent.bpmn | line 32 | column 74
+* signalEventDefinition does not have required property 'signalRef' | com.demo/ch15/signal_boundary_nocancel.bpmn | line 27 | column 72
 	at org.camunda.bpm.engine.impl.util.EngineUtilLogger.exceptionDuringParsing(EngineUtilLogger.java:61)
 	at org.camunda.bpm.engine.impl.util.xml.Parse.throwExceptionForErrors(Parse.java:207)
 	at org.camunda.bpm.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:271)
@@ -465,7 +234,7 @@ org.camunda.bpm.engine.ProcessEngineException: ENGINE-09005 Could not parse BPMN
 	at org.camunda.bpm.engine.impl.RepositoryServiceImpl.deployWithResult(RepositoryServiceImpl.java:101)
 	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deployWithResult(DeploymentBuilderImpl.java:269)
 	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:265)
-	at com.demo.ch14.MessageTest.createDeployment(MessageTest.java:54)
+	at com.demo.ch15.SignalThrowAndBoundaryNoCancelTest.createDeployment(SignalThrowAndBoundaryNoCancelTest.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -492,908 +261,11 @@ org.camunda.bpm.engine.ProcessEngineException: ENGINE-09005 Could not parse BPMN
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 15:17:03.454 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:26:19.322 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:26:40.496 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:28:43.080 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:33:27.528 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:36:02.316 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:41:27.462 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:42:09.760 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:42:53.035 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:43:26.914 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:43:28.149 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Execution with id '5204' does not have a subscription to a message event with name 'msg1': eventSubscriptions is empty 
-org.camunda.bpm.engine.ProcessEngineException: Execution with id '5204' does not have a subscription to a message event with name 'msg1': eventSubscriptions is empty
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotEmpty(EnsureUtil.java:125)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotEmpty(EnsureUtil.java:118)
-	at org.camunda.bpm.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:78)
-	at org.camunda.bpm.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:38)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.messageEventReceived(RuntimeServiceImpl.java:593)
-	at com.demo.ch14.MessageTest.messageEventReceived(MessageTest.java:111)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 15:43:51.499 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:52:37.602 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:56:58.169 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.engine.sql' 
-2021-03-08 15:56:59.174 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.history.sql' 
-2021-03-08 15:56:59.312 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.identity.sql' 
-2021-03-08 15:56:59.517 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.case.engine.sql' 
-2021-03-08 15:56:59.613 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.case.history.sql' 
-2021-03-08 15:56:59.675 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.decision.engine.sql' 
-2021-03-08 15:56:59.893 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.decision.history.sql' 
-2021-03-08 15:56:59.955 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03067 No history level property found in database 
-2021-03-08 15:56:59.955 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelAudit(name=audit, id=2) 
-2021-03-08 15:56:59.982 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 15:58:09.256 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:03:06.917 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:03:07.428 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Execution with id '5203' does not have a subscription to a message event with name 'msg1': eventSubscriptions is empty 
-org.camunda.bpm.engine.ProcessEngineException: Execution with id '5203' does not have a subscription to a message event with name 'msg1': eventSubscriptions is empty
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotEmpty(EnsureUtil.java:125)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotEmpty(EnsureUtil.java:118)
-	at org.camunda.bpm.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:78)
-	at org.camunda.bpm.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:38)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.messageEventReceived(RuntimeServiceImpl.java:593)
-	at com.demo.ch14.MessageTest.messageEventReceived(MessageTest.java:111)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 16:03:26.914 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:05:58.979 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.engine.sql' 
-2021-03-08 16:06:00.107 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.history.sql' 
-2021-03-08 16:06:00.273 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.identity.sql' 
-2021-03-08 16:06:00.491 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.case.engine.sql' 
-2021-03-08 16:06:00.600 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.case.history.sql' 
-2021-03-08 16:06:00.668 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.decision.engine.sql' 
-2021-03-08 16:06:00.935 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.decision.history.sql' 
-2021-03-08 16:06:00.987 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03067 No history level property found in database 
-2021-03-08 16:06:00.987 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelAudit(name=audit, id=2) 
-2021-03-08 16:06:01.007 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:06:27.189 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-03057 There are no Camunda tables in the database. Hint: Set <property name="databaseSchemaUpdate" to value="true" or value="create-drop" (use create-drop for testing only!) in bean processEngineConfiguration in camunda.cfg.xml for automatic schema creation 
-org.camunda.bpm.engine.ProcessEngineException: ENGINE-03057 There are no Camunda tables in the database. Hint: Set <property name="databaseSchemaUpdate" to value="true" or value="create-drop" (use create-drop for testing only!) in bean processEngineConfiguration in camunda.cfg.xml for automatic schema creation
-	at org.camunda.bpm.engine.impl.db.EnginePersistenceLogger.missingActivitiTablesException(EnginePersistenceLogger.java:495)
-	at org.camunda.bpm.engine.impl.db.sql.DbSqlSession.dbSchemaCheckVersion(DbSqlSession.java:338)
-	at org.camunda.bpm.engine.impl.SchemaOperationsProcessEngineBuild.execute(SchemaOperationsProcessEngineBuild.java:53)
-	at org.camunda.bpm.engine.impl.SchemaOperationsProcessEngineBuild.execute(SchemaOperationsProcessEngineBuild.java:33)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessEngineImpl.executeSchemaOperations(ProcessEngineImpl.java:119)
-	at org.camunda.bpm.engine.impl.ProcessEngineImpl.<init>(ProcessEngineImpl.java:92)
-	at org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:786)
-	at com.demo.ch14.MessageTest.init(MessageTest.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 16:07:04.046 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.engine.sql' 
-2021-03-08 16:07:05.376 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.history.sql' 
-2021-03-08 16:07:05.576 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.identity.sql' 
-2021-03-08 16:07:06.168 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.case.engine.sql' 
-2021-03-08 16:07:06.305 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.case.history.sql' 
-2021-03-08 16:07:06.386 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.decision.engine.sql' 
-2021-03-08 16:07:06.661 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.mysql.create.decision.history.sql' 
-2021-03-08 16:07:06.714 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03067 No history level property found in database 
-2021-03-08 16:07:06.715 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelAudit(name=audit, id=2) 
-2021-03-08 16:07:06.738 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:07:36.041 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:07:55.562 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:10:38.432 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:12:40.559 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:15:39.544 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:17:54.428 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:18:12.072 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:25:31.140 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:25:47.083 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:25:54.370 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:26:19.160 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:29:26.037 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:33:48.028 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:41:25.485 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:41:46.655 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:42:06.827 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:43:09.568 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:46:32.091 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:46:38.517 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:48:08.697 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:49:25.713 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:50:17.703 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:50:36.156 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:51:15.230 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:58:25.864 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 16:58:26.278 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-09005 Could not parse BPMN process. Errors: 
-* Invalid message name 'msg-${name}' for element 'messageEventDefinition': expressions in the message start event name are not allowed! | com.demo/ch14/msg3.bpmn | line 6 | column 103 
-org.camunda.bpm.engine.ProcessEngineException: ENGINE-09005 Could not parse BPMN process. Errors: 
-* Invalid message name 'msg-${name}' for element 'messageEventDefinition': expressions in the message start event name are not allowed! | com.demo/ch14/msg3.bpmn | line 6 | column 103
-	at org.camunda.bpm.engine.impl.util.EngineUtilLogger.exceptionDuringParsing(EngineUtilLogger.java:61)
-	at org.camunda.bpm.engine.impl.util.xml.Parse.throwExceptionForErrors(Parse.java:207)
-	at org.camunda.bpm.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:271)
-	at org.camunda.bpm.engine.impl.bpmn.deployer.BpmnDeployer.transformDefinitions(BpmnDeployer.java:104)
-	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.transformResource(AbstractDefinitionDeployer.java:98)
-	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.parseDefinitionResources(AbstractDefinitionDeployer.java:73)
-	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.deploy(AbstractDefinitionDeployer.java:63)
-	at org.camunda.bpm.engine.impl.persistence.deploy.cache.CacheDeployer$1.call(CacheDeployer.java:53)
-	at org.camunda.bpm.engine.impl.persistence.deploy.cache.CacheDeployer$1.call(CacheDeployer.java:50)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContext.runWithoutAuthorization(CommandContext.java:477)
-	at org.camunda.bpm.engine.impl.persistence.deploy.cache.CacheDeployer.deploy(CacheDeployer.java:50)
-	at org.camunda.bpm.engine.impl.persistence.deploy.cache.DeploymentCache.deploy(DeploymentCache.java:66)
-	at org.camunda.bpm.engine.impl.persistence.entity.DeploymentManager.insertDeployment(DeploymentManager.java:64)
-	at org.camunda.bpm.engine.impl.cmd.DeployCmd.deploy(DeployCmd.java:485)
-	at org.camunda.bpm.engine.impl.cmd.DeployCmd$1.call(DeployCmd.java:141)
-	at org.camunda.bpm.engine.impl.cmd.DeployCmd$1.call(DeployCmd.java:129)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContext.runWithoutAuthorization(CommandContext.java:477)
-	at org.camunda.bpm.engine.impl.cmd.DeployCmd.doExecute(DeployCmd.java:129)
-	at org.camunda.bpm.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:95)
-	at org.camunda.bpm.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:75)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.RepositoryServiceImpl.deployWithResult(RepositoryServiceImpl.java:101)
-	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deployWithResult(DeploymentBuilderImpl.java:269)
-	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:265)
-	at com.demo.ch14.MessageTest.createDeployment(MessageTest.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 17:02:17.964 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:03:35.177 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:03:35.335 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Activity_16ubhx3 (transition-create-scope, ProcessInstance[2701])
-	Activity_16ubhx3, name=任务1
-	  ^
-	  |
-	Event_0u982pt
- 
-2021-03-08 17:03:35.338 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b' 
-org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:50)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.resolveExpressionOfEventName(EventSubscriptionDeclaration.java:172)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.createSubscriptionForExecution(EventSubscriptionDeclaration.java:154)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.initialize(ExecutionEntity.java:407)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:46)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch14.MessageTest.startProcessInstanceByKey5(MessageTest.java:196)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
-	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
-	at org.camunda.bpm.engine.impl.juel.AstComposite.eval(AstComposite.java:34)
-	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
-	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
-	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:39)
-	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:57)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:90)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:59)
-	... 51 common frames omitted
-2021-03-08 17:03:54.280 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:03:54.313 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Execution with id '103' does not have a subscription to a message event with name 'msg1': eventSubscriptions is empty 
-org.camunda.bpm.engine.ProcessEngineException: Execution with id '103' does not have a subscription to a message event with name 'msg1': eventSubscriptions is empty
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotEmpty(EnsureUtil.java:125)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotEmpty(EnsureUtil.java:118)
-	at org.camunda.bpm.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:78)
-	at org.camunda.bpm.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:38)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.messageEventReceived(RuntimeServiceImpl.java:593)
-	at com.demo.ch14.MessageTest.messageEventReceived(MessageTest.java:114)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 17:03:55.757 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:03:55.879 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Activity_16ubhx3 (transition-create-scope, ProcessInstance[2801])
-	Activity_16ubhx3, name=任务1
-	  ^
-	  |
-	Event_0u982pt
- 
-2021-03-08 17:03:55.880 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b' 
-org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:50)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.resolveExpressionOfEventName(EventSubscriptionDeclaration.java:172)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.createSubscriptionForExecution(EventSubscriptionDeclaration.java:154)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.initialize(ExecutionEntity.java:407)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:46)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch14.MessageTest.startProcessInstanceByKey2(MessageTest.java:101)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
-	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
-	at org.camunda.bpm.engine.impl.juel.AstComposite.eval(AstComposite.java:34)
-	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
-	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
-	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:39)
-	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:57)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:90)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:59)
-	... 51 common frames omitted
-2021-03-08 17:03:57.640 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:03:57.691 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Activity_16ubhx3 (transition-create-scope, ProcessInstance[2901])
-	Activity_16ubhx3, name=任务1
-	  ^
-	  |
-	Event_0u982pt
- 
-2021-03-08 17:03:57.692 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b' 
-org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:50)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.resolveExpressionOfEventName(EventSubscriptionDeclaration.java:172)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.createSubscriptionForExecution(EventSubscriptionDeclaration.java:154)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.initialize(ExecutionEntity.java:407)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:46)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch14.MessageTest.startProcessInstanceByKey3(MessageTest.java:141)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
-	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
-	at org.camunda.bpm.engine.impl.juel.AstComposite.eval(AstComposite.java:34)
-	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
-	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
-	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:39)
-	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:57)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:90)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:59)
-	... 51 common frames omitted
-2021-03-08 17:03:59.207 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:03:59.247 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Activity_16ubhx3 (transition-create-scope, ProcessInstance[3001])
-	Activity_16ubhx3, name=任务1
-	  ^
-	  |
-	Event_0u982pt
- 
-2021-03-08 17:03:59.247 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b' 
-org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: msg-${b}. Cause: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:50)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.resolveExpressionOfEventName(EventSubscriptionDeclaration.java:172)
-	at org.camunda.bpm.engine.impl.bpmn.parser.EventSubscriptionDeclaration.createSubscriptionForExecution(EventSubscriptionDeclaration.java:154)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.initialize(ExecutionEntity.java:407)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:46)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch14.MessageTest.startProcessInstanceByKey4(MessageTest.java:175)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier 'b'
-	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
-	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
-	at org.camunda.bpm.engine.impl.juel.AstComposite.eval(AstComposite.java:34)
-	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
-	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
-	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:39)
-	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:57)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:90)
-	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:62)
-	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:59)
-	... 51 common frames omitted
-2021-03-08 17:04:00.517 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:04:02.245 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:04:02.248 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Cannot find task with id 1203: task is null 
-org.camunda.bpm.engine.exception.NullValueException: Cannot find task with id 1203: task is null
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:50)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:33)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.TaskServiceImpl.complete(TaskServiceImpl.java:172)
-	at com.demo.ch14.MessageTest.complete2(MessageTest.java:153)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 17:04:03.512 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:04:03.514 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Cannot find task with id 2303: task is null 
-org.camunda.bpm.engine.exception.NullValueException: Cannot find task with id 2303: task is null
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:50)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:33)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.TaskServiceImpl.complete(TaskServiceImpl.java:172)
-	at com.demo.ch14.MessageTest.complete3(MessageTest.java:187)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 17:04:04.749 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:04:05.953 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:04:05.957 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Cannot find task with id 702: task is null 
-org.camunda.bpm.engine.exception.NullValueException: Cannot find task with id 702: task is null
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:50)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:33)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.TaskServiceImpl.complete(TaskServiceImpl.java:172)
-	at com.demo.ch14.MessageTest.complete(MessageTest.java:119)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 17:04:17.402 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:48:29.668 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:49:16.133 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:50:36.640 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:50:51.794 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:51:06.652 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:51:19.958 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:52:38.460 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:53:42.744 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:53:55.819 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 17:53:55.829 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Cannot find task with id 4002: task is null 
-org.camunda.bpm.engine.exception.NullValueException: Cannot find task with id 4002: task is null
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.generateException(EnsureUtil.java:380)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:54)
-	at org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull(EnsureUtil.java:49)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:50)
-	at org.camunda.bpm.engine.impl.cmd.CompleteTaskCmd.execute(CompleteTaskCmd.java:33)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.TaskServiceImpl.complete(TaskServiceImpl.java:172)
-	at com.demo.ch14.MessageTest.complete3(MessageTest.java:188)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-2021-03-08 18:00:18.984 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 18:03:28.435 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 18:03:28.734 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16006 BPMN Stack Trace:
-	Event_1dnn0s4 (activity-execute, ProcessInstance[4301])
-	Event_1dnn0s4
-	  ^
-	  |
-	Event_0awe38s
- 
-2021-03-08 18:03:28.736 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: ENGINE-09008 Exception while instantiating class 'com.demo.ch14': ENGINE-09017 Cannot load class 'com.demo.ch14': com.demo.ch14 
-org.camunda.bpm.engine.ProcessEngineException: ENGINE-09008 Exception while instantiating class 'com.demo.ch14': ENGINE-09017 Cannot load class 'com.demo.ch14': com.demo.ch14
-	at org.camunda.bpm.engine.impl.util.EngineUtilLogger.exceptionWhileInstantiatingClass(EngineUtilLogger.java:81)
-	at org.camunda.bpm.engine.impl.util.ClassDelegateUtil.instantiateDelegate(ClassDelegateUtil.java:53)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.ClassDelegateActivityBehavior.getActivityBehaviorInstance(ClassDelegateActivityBehavior.java:111)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.ClassDelegateActivityBehavior$1.call(ClassDelegateActivityBehavior.java:67)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.ClassDelegateActivityBehavior$1.call(ClassDelegateActivityBehavior.java:64)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.AbstractBpmnActivityBehavior.executeWithErrorPropagation(AbstractBpmnActivityBehavior.java:110)
-	at org.camunda.bpm.engine.impl.bpmn.behavior.ClassDelegateActivityBehavior.execute(ClassDelegateActivityBehavior.java:64)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:60)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:49)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueIfExecutionDoesNotAffectNextOperation(PvmExecutionImpl.java:1988)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:41)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:30)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1927)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:1994)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1943)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1924)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:60)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:30)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:67)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:72)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:649)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:624)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:60)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:72)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:649)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:624)
-	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:60)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:107)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionCreateScope.scopeCreated(PvmAtomicOperationTransitionCreateScope.java:37)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:53)
-	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:95)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:127)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:114)
-	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:82)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:640)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:614)
-	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:246)
-	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:449)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:62)
-	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:34)
-	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:27)
-	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:106)
-	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:69)
-	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:32)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:165)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:131)
-	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:127)
-	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:84)
-	at com.demo.ch14.MessageTest.startProcessInstanceByKey4(MessageTest.java:177)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.camunda.bpm.engine.ClassLoadingException: ENGINE-09017 Cannot load class 'com.demo.ch14': com.demo.ch14
-	at org.camunda.bpm.engine.impl.util.EngineUtilLogger.classLoadingException(EngineUtilLogger.java:138)
-	at org.camunda.bpm.engine.impl.util.ReflectUtil.loadClass(ReflectUtil.java:110)
-	at org.camunda.bpm.engine.impl.util.ClassDelegateUtil.instantiateDelegate(ClassDelegateUtil.java:45)
-	... 94 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.demo.ch14
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Class.java:348)
-	at org.camunda.bpm.engine.impl.util.ReflectUtil.loadClass(ReflectUtil.java:87)
-	... 95 common frames omitted
-2021-03-08 18:04:30.444 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
-2021-03-08 18:04:56.182 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:55:30.233 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:56:27.676 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 14:58:55.857 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 15:14:08.452 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 15:16:32.372 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 15:21:09.631 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 15:21:22.057 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
+2021-03-09 15:21:46.183 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created. 
