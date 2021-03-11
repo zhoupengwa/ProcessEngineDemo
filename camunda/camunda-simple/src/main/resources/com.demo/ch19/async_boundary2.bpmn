@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0ctjtuy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.5.0">
+  <bpmn:process id="async" isExecutable="true" camunda:jobPriority="50">
+    <bpmn:endEvent id="Event_18y83un">
+      <bpmn:incoming>Flow_1nxu7by</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1nxu7by" sourceRef="Activity_1nicj02" targetRef="Event_18y83un" />
+    <bpmn:userTask id="Activity_1nicj02" name="【总经理】审批" camunda:priority="30">
+      <bpmn:incoming>Flow_11hhq0u</bpmn:incoming>
+      <bpmn:outgoing>Flow_1nxu7by</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_08hk2ft" name="请假申请">
+      <bpmn:incoming>Flow_1iw4499</bpmn:incoming>
+      <bpmn:outgoing>Flow_11hhq0u</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_11hhq0u" sourceRef="Activity_08hk2ft" targetRef="Activity_1nicj02" />
+    <bpmn:startEvent id="Event_0p7l3eg">
+      <bpmn:outgoing>Flow_1iw4499</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1iw4499" sourceRef="Event_0p7l3eg" targetRef="Activity_08hk2ft" />
+    <bpmn:sequenceFlow id="Flow_1qkqixe" sourceRef="Event_13fz6sd" targetRef="Activity_142k50e" />
+    <bpmn:userTask id="Activity_142k50e" name="任务2">
+      <bpmn:incoming>Flow_1qkqixe</bpmn:incoming>
+      <bpmn:outgoing>Flow_1khzdga</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_1aq3nut">
+      <bpmn:incoming>Flow_1khzdga</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1khzdga" sourceRef="Activity_142k50e" targetRef="Event_1aq3nut" />
+    <bpmn:boundaryEvent id="Event_13fz6sd" cancelActivity="false" attachedToRef="Activity_08hk2ft">
+      <bpmn:outgoing>Flow_1qkqixe</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_1jbdb5w">
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">2020-10-02</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="async">
+      <bpmndi:BPMNEdge id="Flow_1khzdga_di" bpmnElement="Flow_1khzdga">
+        <di:waypoint x="580" y="240" />
+        <di:waypoint x="632" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qkqixe_di" bpmnElement="Flow_1qkqixe">
+        <di:waypoint x="410" y="175" />
+        <di:waypoint x="410" y="240" />
+        <di:waypoint x="480" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1iw4499_di" bpmnElement="Flow_1iw4499">
+        <di:waypoint x="188" y="117" />
+        <di:waypoint x="360" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11hhq0u_di" bpmnElement="Flow_11hhq0u">
+        <di:waypoint x="460" y="117" />
+        <di:waypoint x="520" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nxu7by_di" bpmnElement="Flow_1nxu7by">
+        <di:waypoint x="620" y="117" />
+        <di:waypoint x="682" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_18y83un_di" bpmnElement="Event_18y83un">
+        <dc:Bounds x="682" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06uskrh_di" bpmnElement="Activity_1nicj02">
+        <dc:Bounds x="520" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0hvadoi_di" bpmnElement="Activity_08hk2ft">
+        <dc:Bounds x="360" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0p7l3eg_di" bpmnElement="Event_0p7l3eg">
+        <dc:Bounds x="152" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o1gbil_di" bpmnElement="Activity_142k50e">
+        <dc:Bounds x="480" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1aq3nut_di" bpmnElement="Event_1aq3nut">
+        <dc:Bounds x="632" y="222" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0xwjpyj_di" bpmnElement="Event_13fz6sd">
+        <dc:Bounds x="392" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

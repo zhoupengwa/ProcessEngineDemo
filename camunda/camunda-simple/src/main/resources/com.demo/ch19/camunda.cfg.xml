@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="processEngineConfiguration"
+          class="org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1/camunda"/>
+        <property name="jdbcDriver" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUsername" value="root"/>
+        <property name="jdbcPassword" value="123456"/>
+        <property name="databaseSchemaUpdate" value="false"/>
+        <property name="dbHistoryUsed" value="true"/>
+
+        <!--关闭租户校验-->
+        <property name="tenantCheckEnabled" value="false"/>
+
+        <!--开启定时器-->
+        <property name="jobExecutorActivate" value="true"/>
+
+    </bean>
+
+    <bean id="testUser" class="com.demo.ch1.TestUser">
+        <property name="age" value="19"/>
+        <property name="name" value="zhangsan"/>
+    </bean>
+</beans>
