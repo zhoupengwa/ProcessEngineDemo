@@ -16,8 +16,13 @@
         <!--关闭租户校验-->
         <property name="tenantCheckEnabled" value="false"/>
 
-        <!--自动保存脚本变量存储-->
-<!--        <property name="autoStoreScriptVariables" value="true"/>-->
+        <!--自定义表单渲染-->
+        <property name="customFormEngines">
+            <list>
+                <bean class="com.demo.ch18.MyFormEngine"/>
+            </list>
+        </property>
+
     </bean>
 
     <bean id="testUser" class="com.demo.ch1.TestUser">
