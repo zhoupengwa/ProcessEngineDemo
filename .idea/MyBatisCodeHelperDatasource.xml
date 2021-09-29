@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="javaMapperPackage" value="com.demo.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/java" />
+        <option name="javaModelPackage" value="com.demo.domain.dto" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="camunda-springboot" />
+        <option name="lombokGetterSetterAnnotation" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="camunda-springboot">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.demo.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/java" />
+                  <option name="javaModelPacakge" value="com.demo.domain.dto" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.demo.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/java" />
+                  <option name="javaServicePackage" value="com.demo.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/java" />
+                  <option name="xmlPackage" value="mybatis.mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="noJdbcType" value="true" />
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="camunda:z_log">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ZLog" />
+                  <option name="moduleName" value="camunda-springboot" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="camunda:z_paiche">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ZPaiche" />
+                  <option name="moduleName" value="camunda-springboot" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="camunda:zz_department">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ZzDepartment" />
+                  <option name="moduleName" value="camunda-springboot" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="camunda:zz_role">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ZzRole" />
+                  <option name="moduleName" value="camunda-springboot" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="camunda:zz_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ZzUser" />
+                  <option name="moduleName" value="camunda-springboot" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="xmlMapperPackage" value="mybatis.mapper" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/camunda/camunda-springboot/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>
