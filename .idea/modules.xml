@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/activiti-demo.iml" filepath="$PROJECT_DIR$/.idea/activiti-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/camunda/camunda.iml" filepath="$PROJECT_DIR$/camunda/camunda.iml" />
       <module fileurl="file://$PROJECT_DIR$/camunda/camunda-simple/camunda-simple.iml" filepath="$PROJECT_DIR$/camunda/camunda-simple/camunda-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/camunda/camunda-springboot/camunda-springboot.iml" filepath="$PROJECT_DIR$/camunda/camunda-springboot/camunda-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
     </modules>
   </component>
